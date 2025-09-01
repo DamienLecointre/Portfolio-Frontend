@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-import LoadingTxt from "@/components/ui/LoadingTxt";
+import LoadingTxt from "@/components/sections/loading/LoadingTxt";
+import IntroductionTxt from "@/components/sections/loading/IntroductionTxt";
 
-import styles from "@/styles/components/ui/Loading.module.scss";
+import styles from "@/styles/components/sections/loading/Loading.module.scss";
 
 const steps: [number, number][] = [
   [0, 100],
@@ -44,7 +45,9 @@ function Loading() {
       <div className={styles.blackContainer}>
         <LoadingTxt />
       </div>
-      <div className={styles.whiteContainer}></div>
+      <div className={styles.whiteContainer}>
+        <IntroductionTxt />
+      </div>
     </div>
   );
 }

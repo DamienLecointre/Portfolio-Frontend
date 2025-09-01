@@ -1,5 +1,5 @@
 import SkipBtn from "@/components/ui/SkipBtn";
-import Loading from "@/components/ui/Loading";
+import Loading from "@/components/sections/loading/Loading";
 
 import styles from "@/styles/pages/Page.module.scss";
 

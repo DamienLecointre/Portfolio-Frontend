@@ -6,3 +6,9 @@ $color-white: #f7f7f9;
 $color-accent: #ff6f28;
 $color-medium-dark: #525252;
 $color-light-dark: #bdbdbd;
+
+@mixin introTxt {
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}

@@ -1,4 +1,4 @@
-import styles from "@/styles/components/ui/LoadingTxt.module.scss";
+import styles from "@/styles/components/sections/loading/LoadingTxt.module.scss";
 function LoadingTxt() {
   return (
     <div className={styles.container}>

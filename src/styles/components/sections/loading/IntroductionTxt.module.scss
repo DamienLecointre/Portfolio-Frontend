@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.sentence {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  padding-left: $smallPagePaddingLeftRight;
+  transition: $mediumTransition;
+}
+
+.sentence.visible {
+  opacity: 1;
+}
+
+.segment {
+  @include introTxt;
+  text-wrap: nowrap;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: $mediumTransition;
+}
+
+.segmentLeft {
+  color: $color-black;
+}
+
+.segmentRight {
+  color: $color-accent;
+}
+
+.segment.show {
+  transform: translateY(0);
+  opacity: 1;
+}
