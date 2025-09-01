@@ -1,5 +1,5 @@
 .btn {
-  position: relative;
+  position: fixed;
   height: fit-content; 
   font-size: 1.5rem;
   font-weight: 400;
@@ -10,6 +10,9 @@
   outline: none;
   border: none;
   padding-top: 24px;
+  opacity: 0;
+  transform: scale(.3);
+  animation: skipBtnShow $extraSlowTransition forwards;
 
     &::after {
       @include pseudoElementContent;
@@ -24,5 +27,12 @@
 
     &:hover::after {
       transform: scaleX(1);
+    }
+
+    @keyframes skipBtnShow {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 }

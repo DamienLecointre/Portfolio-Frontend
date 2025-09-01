@@ -1,12 +1,13 @@
-import SkipBtn from "@/components/btn/SkipBtn"
+import SkipBtn from "@/components/ui/SkipBtn";
+import Loading from "@/components/ui/Loading";
 
-import styles from "@/styles/pages/Page.module.scss"
+import styles from "@/styles/pages/Page.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.pageContainer}>
-      <SkipBtn/>
-      {/* <h1>HOME</h1> */}
+      <SkipBtn />
+      <Loading />
     </div>
   );
 }
