@@ -10,6 +10,16 @@
   background: $black;
 }
 
+.loadingWrapper {
+  height: 100%;
+  opacity: 1;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
 .whiteContainer {
   height: 100%;
   background: $white;

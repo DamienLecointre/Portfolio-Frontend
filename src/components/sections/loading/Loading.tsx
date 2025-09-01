@@ -18,6 +18,8 @@ const steps: [number, number][] = [
 const stepDelay = 2000;
 function Loading() {
   const [columns, setColumns] = useState<[number, number]>(steps[0]);
+  const [finished, setFinished] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
     let stepIndex = 1;
@@ -29,7 +31,11 @@ function Loading() {
       setColumns(steps[stepIndex]);
       stepIndex++;
 
-      if (stepIndex >= steps.length) clearInterval(interval);
+      if (stepIndex >= steps.length) {
+        clearInterval(interval);
+        setFinished(true);
+        setTimeout(() => setShowLoading(false), 1000);
+      }
     }, stepDelay);
 
     return () => clearInterval(interval);
@@ -43,7 +49,15 @@ function Loading() {
       }}
     >
       <div className={styles.blackContainer}>
-        <LoadingTxt />
+        {showLoading && (
+          <div
+            className={`${styles.loadingWrapper} ${
+              finished ? styles.fadeOut : ""
+            }`}
+          >
+            <LoadingTxt />
+          </div>
+        )}
       </div>
       <div className={styles.whiteContainer}>
         <IntroductionTxt />

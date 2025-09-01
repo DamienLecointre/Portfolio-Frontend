@@ -6,7 +6,7 @@ function LoadingTxt() {
         <div className={styles.loaderIndicatorDot}></div>
         <div className={styles.loaderIndicatorBlur}></div>
       </div>
-      <h4 className={styles.text}>LOADING</h4>
+      <h4 className={styles.text}>Loading</h4>
     </div>
   );
 }
