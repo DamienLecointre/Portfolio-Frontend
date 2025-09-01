@@ -1,0 +1,57 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  gap: 24px;
+}
+
+.loaderIndicatorContainer {
+  position: relative;
+}
+
+.loaderIndicatorDot {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 150px;
+  background: $accent;
+  filter: blur(1.5px);
+  transform: translate(-50%, -50%) scale(1);
+  left: 0;
+  z-index: 10;
+}
+
+.loaderIndicatorBlur {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 150px;
+  background: rgba(255, 112, 40, 0.6);
+  box-shadow: 0px 0px 10px 10px rgba(255,111,40,0.6);
+  transform: translate(-50%, -50%) scale(1);
+  left: 0;
+  z-index: 1;
+  animation: flashingDot $extraSlowerTransition infinite;
+
+  @keyframes flashingDot {
+    0% {
+      transform: translate(-50%, -50%) scale(.5);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(.5);
+    }
+  }
+}
+
+.text {
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: $color-white;
+}

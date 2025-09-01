@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import LoadingTxt from "@/components/ui/LoadingTxt";
+
 import styles from "@/styles/components/ui/Loading.module.scss";
 
 const steps: [number, number][] = [
@@ -39,8 +41,10 @@ function Loading() {
         gridTemplateColumns: `${columns[0]}% ${columns[1]}%`,
       }}
     >
-      <div className={styles.blackContainer} />
-      <div className={styles.whiteContainer} />
+      <div className={styles.blackContainer}>
+        <LoadingTxt />
+      </div>
+      <div className={styles.whiteContainer}></div>
     </div>
   );
 }
