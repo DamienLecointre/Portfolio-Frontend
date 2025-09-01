@@ -1,0 +1,28 @@
+.btn {
+  position: relative;
+  height: fit-content; 
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  color: $color-accent;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding-top: 24px;
+
+    &::after {
+      @include pseudoElementContent;
+      height: 1.5px;
+      width: 100%;
+      background: $accent;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transition: $speedTransition;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+}
