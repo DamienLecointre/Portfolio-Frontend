@@ -2,3 +2,14 @@
   content: "";
   position: absolute;
 }
+
+@mixin fullScreenSize {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin centerChildren {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

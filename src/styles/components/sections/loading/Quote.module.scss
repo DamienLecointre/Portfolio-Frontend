@@ -1,0 +1,27 @@
+.title,
+.quote {
+  letter-spacing: .1rem;
+  color: $color-white;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.quote {
+  font-size: 1.2em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.quoteContainer {
+  display: flex;
+  padding-top: 16px;
+}
+
+.quoteIcon {
+ font-size: 1.2em;
+ color: $color-accent;
+ padding: 0 16px;
+}

@@ -20,6 +20,33 @@
   opacity: 0;
 }
 
+.quoteWrapper {
+  height: 100%;
+  @include centerChildren;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0.5);
+  // transition: 4s ease-in-out;
+}
+
+.arise {
+  animation: quoteAnimation 6s ease-in-out forwards;
+  @keyframes quoteAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+}
+
 .whiteContainer {
   height: 100%;
   background: $white;

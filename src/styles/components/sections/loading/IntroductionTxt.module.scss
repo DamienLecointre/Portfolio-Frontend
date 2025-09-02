@@ -1,7 +1,6 @@
 .container {
   position: relative;
-  height: 100%;
-  width: 100%;
+  @include fullScreenSize;
 }
 
 .sentence {
@@ -22,7 +21,7 @@
 }
 
 .segment {
-  @include introTxt;
+  @include introTxtSetup;
   text-wrap: nowrap;
   opacity: 0;
   transform: translateY(100%);
