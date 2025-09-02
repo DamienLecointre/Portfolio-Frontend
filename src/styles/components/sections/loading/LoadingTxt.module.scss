@@ -1,5 +1,5 @@
 .container {
-  @include fullScreenSize;
+  @include fullParentSize;
   display: flex;
   align-items: center;
   justify-content: flex-end;

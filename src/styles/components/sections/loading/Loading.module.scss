@@ -1,6 +1,5 @@
 .container {
-  height: 100vh;
-  width: 100vw;
+  @include fullScreenSize;
   display: grid;
   transition: $slowTransition;
 }

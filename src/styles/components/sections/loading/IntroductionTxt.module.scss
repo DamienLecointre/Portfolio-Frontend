@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  @include fullScreenSize;
+  @include fullParentSize;
 }
 
 .sentence {
