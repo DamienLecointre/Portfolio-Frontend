@@ -47,7 +47,7 @@ function Loading() {
     }, stepDelay);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [navTo]);
 
   return (
     <div
