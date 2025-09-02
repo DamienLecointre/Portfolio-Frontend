@@ -19,8 +19,11 @@ const steps: [number, number][] = [
 
 const stepDelay = 2000;
 function Loading() {
+  type IntroGridColumns = [number, number];
+
   const navTo = useNavTo();
-  const [columns, setColumns] = useState<[number, number]>(steps[0]);
+
+  const [columns, setColumns] = useState<IntroGridColumns>(steps[0]);
   const [finished, setFinished] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
   const [showQuote, setShowQuote] = useState(true);
