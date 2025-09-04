@@ -1,14 +1,106 @@
+//FONT FAMILIES
 $font-primary: 'Poppins', sans-serif;
 $font-secondary: 'Josefin Sans', sans-serif;
 
+//COLORS
 $color-black: #0a0a0a;
 $color-white: #f7f7f9;
 $color-accent: #ff6f28;
+$color-deepMedium-dark: #303030;
 $color-medium-dark: #525252;
 $color-light-dark: #bdbdbd;
 
+//FONT SIZES
+$fontSize226: 14.125em;
+$fontSize150: 9.375em;
+$fontSize58: 3.625em;
+$fontSize48: 3em;
+$fontSize30: 1.875em;
+$fontSize28: 1.75em;
+$fontSize24: 1.5em;
+$fontSize18: 1.125em;
+$fontSize20: 1.25em;
+$fontSize16: 1em;
+$fontSize12: 0.75em;
+
+//FONT WEIGHT
+$fontWeightLight300: 300;
+$fontWeightRegular400: 400;
+$fontWeightMedium500: 500;
+$fontWeightSemiBold600: 600;
+
+//LINE HEIGHT
+$lineHeight42: 42px;
+
+//TEXT MIXINS
 @mixin introTxtSetup {
   font-size: 1.2em;
   font-weight: 400;
   letter-spacing: 0.15em;
 }
+
+@mixin desktopTitleH1Xl {
+  font-size: $fontSize58;
+  font-weight: $fontWeightRegular400;
+}
+
+@mixin desktopTitleH1L {
+  font-size: $fontSize48;
+  font-weight: $fontWeightRegular400;
+}
+
+@mixin desktopTitleH1M {
+  font-size: $fontSize30;
+  font-weight: $fontWeightRegular400;
+}
+
+@mixin desktopTitleH1S {
+  font-size: $fontSize30;
+  font-weight: $fontWeightRegular400;
+}
+
+@mixin desktopTitleH2Xl {
+  font-family: $font-secondary;
+  font-size: $fontSize226;
+  font-weight: $fontWeightSemiBold600;
+  color: $color-deepMedium-dark;
+}
+
+@mixin desktopTitleH2M {
+  font-family: $font-secondary;
+  font-size: $fontSize150;
+  font-weight: $fontWeightSemiBold600;
+  color: $color-deepMedium-dark;
+}
+
+@mixin desktopTitleH3 {
+  font-size: $fontSize28;
+  font-weight: $fontWeightRegular400;
+}
+
+@mixin desktopTitleH5 {
+  font-size: $fontSize16;
+  font-weight: $fontWeightRegular400;
+}
+
+@mixin desktopTitleH6 {
+  font-size: $fontSize12;
+  font-weight: $fontWeightLight300;
+}
+
+@mixin desktopParagraphXl {
+  font-size: $fontSize18;
+  font-weight: $fontWeightRegular400;
+  line-height: $lineHeight42;
+}
+
+@mixin desktopLinkXl {
+  font-size: $fontSize20;
+  font-weight: $fontWeightMedium500;
+}
+
+@mixin desktopLinkM {
+  font-size: $fontSize16;
+  font-weight: $fontWeightLight300;
+}
+
