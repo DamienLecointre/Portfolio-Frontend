@@ -2,28 +2,31 @@
 
 import { useEffect, useState } from "react";
 
+import { useNavTo } from "@/hooks/useNavTo";
+import { useIsMobile } from "@/hooks/useIsMobile";
+
 import LoadingTxt from "@/components/sections/loading/LoadingTxt";
 import IntroductionTxt from "@/components/sections/loading/IntroductionTxt";
 import Quote from "@/components/sections/loading/Quote";
-import { useNavTo } from "@/hooks/useNavTo";
 
 import styles from "@/styles/components/sections/loading/Loading.module.scss";
 
 const steps: [number, number][] = [
   [0, 100],
   [20, 80],
-  [40, 60],
-  [60, 40],
+  [35, 65],
+  [55, 45],
   [100, 0],
 ];
 
 const stepDelay = 2000;
 function Loading() {
-  type IntroGridColumns = [number, number];
+  type IntroGridValue = [number, number];
 
   const navTo = useNavTo();
+  const isMobile = useIsMobile(768);
 
-  const [columns, setColumns] = useState<IntroGridColumns>(steps[0]);
+  const [gridValue, setGridValue] = useState<IntroGridValue>(steps[0]);
   const [finished, setFinished] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
   const [showQuote, setShowQuote] = useState(true);
@@ -31,11 +34,11 @@ function Loading() {
   useEffect(() => {
     let stepIndex = 1;
 
-    setColumns(steps[stepIndex]);
+    setGridValue(steps[stepIndex]);
     stepIndex++;
 
     const interval = setInterval(() => {
-      setColumns(steps[stepIndex]);
+      setGridValue(steps[stepIndex]);
       stepIndex++;
 
       if (stepIndex >= steps.length) {
@@ -43,9 +46,9 @@ function Loading() {
         setFinished(true);
         setTimeout(() => setShowLoading(false), 1000);
         setTimeout(() => setShowQuote(true), 1200);
-        setTimeout(() => {
-          navTo("home");
-        }, 6000);
+        // setTimeout(() => {
+        //   navTo("home");
+        // }, 6000);
       }
     }, stepDelay);
 
@@ -55,9 +58,11 @@ function Loading() {
   return (
     <div
       className={styles.container}
-      style={{
-        gridTemplateColumns: `${columns[0]}% ${columns[1]}%`,
-      }}
+      style={
+        isMobile
+          ? { gridTemplateRows: `${gridValue[1]}% ${gridValue[0]}%` }
+          : { gridTemplateColumns: `${gridValue[0]}% ${gridValue[1]}%` }
+      }
     >
       <div className={styles.blackContainer}>
         {showLoading && (

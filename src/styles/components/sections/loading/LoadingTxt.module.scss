@@ -9,6 +9,8 @@
 
 .loaderIndicatorContainer {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .loaderIndicatorDot {
@@ -18,8 +20,9 @@
   border-radius: 150px;
   background: $accent;
   filter: blur(1.5px);
-  transform: translate(-50%, -50%) scale(1);
-  left: 0;
+  transform: translate(0, -50%) scale(1);
+  top: 50%;
+  right: 0;
   z-index: 10;
 }
 
@@ -30,20 +33,21 @@
   border-radius: 150px;
   background: rgba(255, 112, 40, 0.6);
   box-shadow: 0px 0px 10px 10px rgba(255,111,40,0.6);
-  transform: translate(-50%, -50%) scale(1);
-  left: 0;
+  transform: translate(-1px, -50%) scale(1);
+  top: 50%;
+  right: 0;
   z-index: 1;
   animation: flashingDot $extraSlowerTransition infinite;
 
   @keyframes flashingDot {
     0% {
-      transform: translate(-50%, -50%) scale(.5);
+      transform: translate(-1px, -50%) scale(.5);
     }
     50% {
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-1px, -50%) scale(1);
     }
     100% {
-      transform: translate(-50%, -50%) scale(.5);
+      transform: translate(-1px, -50%) scale(.5);
     }
   }
 }
@@ -53,4 +57,45 @@
   font-weight: 400;
   letter-spacing: 0.15em;
   color: $color-white;
+}
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 768px) {
+  .container {
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .loaderIndicatorDot  {
+    left: 0;
+    transform: translate(0, 50%) scale(1);
+  }
+  
+  .loaderIndicatorBlur {
+    left: 0;
+    top: -50%;
+    transform: translate(1px, 60%) scale(1);
+
+     @keyframes flashingDot {
+    0% {
+      transform: translate(1px, 60%) scale(.5);
+    }
+    50% {
+      transform: translate(1px, 60%) scale(1);
+    }
+    100% {
+      transform: translate(1px, 60%) scale(.5);
+    }
+  }
+  }
+}
+
+@media (max-width: 490px) {
+  .text {
+    font-size: 0.875em;
+  }
 }

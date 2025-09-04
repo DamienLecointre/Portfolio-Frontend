@@ -5,7 +5,7 @@
 
 .sentence {
   position: absolute;
-  height: 100%;
+  @include fullParentSize;
   opacity: 0;
   display: flex;
   align-items: center;
@@ -39,4 +39,21 @@
 .segment.show {
   transform: translateY(0);
   opacity: 1;
+}
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 768px) {
+  .sentence {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 490px) {
+  .segment {
+    font-size: 0.875em;
+  }
 }

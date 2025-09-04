@@ -1,5 +1,5 @@
 .pageContainer {
-  @include fullParentSize;
+  @include fullScreenSize;
   display: flex;
   justify-content: center;
 }

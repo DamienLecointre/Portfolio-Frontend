@@ -1,16 +1,17 @@
 .container {
-  @include fullScreenSize;
+  @include fullParentSize;
   display: grid;
   transition: $slowTransition;
 }
 
 .blackContainer {
-  height: 100%;
+  @include fullParentSize;
   background: $black;
+  order: 1;
 }
 
 .loadingWrapper {
-  height: 100%;
+  @include fullParentSize;
   opacity: 1;
   transition: opacity 1.2s ease-in-out;
 }
@@ -20,12 +21,11 @@
 }
 
 .quoteWrapper {
-  height: 100%;
+  @include fullParentSize;
   @include centerChildren;
   flex-direction: column;
   opacity: 0;
   transform: scale(0.5);
-  // transition: 4s ease-in-out;
 }
 
 .arise {
@@ -47,6 +47,28 @@
 }
 
 .whiteContainer {
-  height: 100%;
+  @include fullParentSize;
   background: $white;
+  order: 2;
+
+}
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 768px) {
+  .blackContainer {
+    order: 2;
+    padding: 0 $smallPagePaddingTopBot;
+  }
+
+  .loadingWrapper {
+    padding-top: $space24;
+  }
+
+ .whiteContainer {
+    order: 1;
+    padding: 0 $smallPagePaddingTopBot;
+ }
 }
