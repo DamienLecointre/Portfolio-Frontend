@@ -46,9 +46,9 @@ function Loading() {
         setFinished(true);
         setTimeout(() => setShowLoading(false), 1000);
         setTimeout(() => setShowQuote(true), 1200);
-        // setTimeout(() => {
-        //   navTo("home");
-        // }, 6000);
+        setTimeout(() => {
+          navTo("home");
+        }, 5000);
       }
     }, stepDelay);
 

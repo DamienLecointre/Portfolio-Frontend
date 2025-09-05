@@ -1,0 +1,31 @@
+.titleContainer {
+  position: relative;
+  @include fullParentSize;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.subTitleWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.subTitle {
+  @include desktopTitleH1Xl;
+  z-index: 10;
+}
+
+.functionTitle {
+  @include desktopTitleH1M;
+  color: $color-accent;
+}
+
+.pageTitle {
+  // position: absolute;
+  @include desktopTitleH2Xl;
+  line-height: $lineHeight110;
+  transform: translateX(-21px);
+  z-index: 0;
+}

@@ -1,5 +1,6 @@
 .pageContainer {
   @include fullScreenSize;
+  display: flex;
   background: $black;
   padding: $pagePaddingTopBot $pagePaddingLeftRight;
 }

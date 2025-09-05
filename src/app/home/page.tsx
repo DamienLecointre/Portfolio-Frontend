@@ -1,9 +1,11 @@
+import PageTitle from "@/components/ui/PageTitle";
+
 import styles from "@/styles/pages/Home.module.scss";
 
 function HomePage() {
   return (
     <div className={styles.pageContainer}>
-      <h1>HOME</h1>
+      <PageTitle dynamicTitle="Portfolio" />
     </div>
   );
 }
