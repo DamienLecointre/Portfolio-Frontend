@@ -4,6 +4,13 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  opacity: 0;
+  animation: showPageTitle 3s ease-in-out forwards;
+}
+@keyframes showPageTitle {
+  to {
+    opacity: 1;
+  }
 }
 
 .subTitleWrapper {
@@ -23,7 +30,7 @@
 }
 
 .pageTitle {
-  // position: absolute;
+  width: fit-content;
   @include desktopTitleH2Xl;
   line-height: $lineHeight110;
   transform: translateX(-21px);

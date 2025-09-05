@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "@/styles/components/sections/loading/Quote.module.scss";
-import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 export default function Quote() {
   return (
     <>

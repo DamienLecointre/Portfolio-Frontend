@@ -1,0 +1,16 @@
+.linkContainer {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: $space8;
+}
+
+.contactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacttxt {
+  @include desktopLinkM
+}

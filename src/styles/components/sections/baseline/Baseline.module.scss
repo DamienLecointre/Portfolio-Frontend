@@ -1,0 +1,30 @@
+.baselineContainer {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  column-gap: $space8;
+}
+
+.baselineWrapper {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.icon {
+  height: 12px;
+  width: 12px;
+}
+
+.baseline {
+  @include desktopTitleH6;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  background: $accent;
+}
