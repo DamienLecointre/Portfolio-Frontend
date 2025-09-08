@@ -33,6 +33,9 @@ $fontWeightSemiBold600: 600;
 $lineHeight42: 42px;
 $lineHeight110: 110px;
 
+//LETTER SPACING
+$letterSpacingSmall: 0.15em;
+
 //TEXT MIXINS
 @mixin introTxtSetup {
   font-size: 1.2em;

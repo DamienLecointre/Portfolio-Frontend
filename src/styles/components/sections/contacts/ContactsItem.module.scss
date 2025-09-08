@@ -1,16 +1,59 @@
 .linkContainer {
+  position: relative;
   height: fit-content;
   display: flex;
   align-items: center;
   gap: $space8;
+  overflow: hidden;
+
+  &:hover {
+    .contactIcon {
+      transform: translateY(-120%);
+    }
+
+    .contactIconColored  {
+      transform: translateY(10%);
+    }
+  
+    .contacttxt {
+      opacity: 1;
+    }
+
+    .contacttxt::after {
+      transform: scaleX(1);
+    }
+  }
 }
 
 .contactIcon {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(0);
+  transition: $speedTransition;
+}
+
+.contactIconColored {
+  position: absolute;
+  color: $color-accent;
+  transform: translateY(100%);
+  transition: $speedTransition;
 }
 
 .contacttxt {
-  @include desktopLinkM
+  position: relative;
+  @include desktopLinkM;
+  opacity: 0;
+  transition: $speedTransition;
+
+  &::after {
+    @include pseudoElementContent;
+    height: 1px;
+    width: 100%;
+    background: $accent;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: $speedTransition;
+  }
 }

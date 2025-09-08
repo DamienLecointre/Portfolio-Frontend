@@ -18,3 +18,7 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin showElementOpacity1 {
+  animation: showElementOpacity1 3s ease-in-out forwards ;
+}

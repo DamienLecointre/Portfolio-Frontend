@@ -5,9 +5,10 @@
   justify-content: center;
   flex-direction: column;
   opacity: 0;
-  animation: showPageTitle 3s ease-in-out forwards;
+  @include showElementOpacity1;
 }
-@keyframes showPageTitle {
+
+@keyframes showElementOpacity1 {
   to {
     opacity: 1;
   }

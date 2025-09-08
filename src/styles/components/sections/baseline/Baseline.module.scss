@@ -3,6 +3,7 @@
   width: fit-content;
   display: flex;
   column-gap: $space8;
+  overflow-y: hidden;
 }
 
 .baselineWrapper {
@@ -10,21 +11,40 @@
   width: fit-content;
   display: flex;
   align-items: center;
-  writing-mode: vertical-lr;
+  opacity: 0;
+  writing-mode: vertical-rl;
   transform: rotate(180deg);
+  gap: $space12;
+  @include showElementOpacity1;
+}
+
+@keyframes showElementOpacity1 {
+  to {
+    opacity: 1;
+  }
 }
 
 .icon {
   height: 12px;
   width: 12px;
+  transform: rotate(90deg)
 }
 
 .baseline {
   @include desktopTitleH6;
+  letter-spacing: $letterSpacingSmall;
 }
 
 .line {
   height: 100%;
   width: 1px;
   background: $accent;
+  transform: translateY(100%);
+  animation: showCopyrightUnderline 2s ease-in-out forwards;
+}
+
+@keyframes showCopyrightUnderline {
+  to {
+    transform: translateY(0);
+  }
 }

@@ -17,7 +17,7 @@ function ContactsItem({ icon, label, link }: ContactItemProps) {
       className={styles.linkContainer}
     >
       <span className={styles.contactIcon}>{icon}</span>
-      {/* <span className={styles.contactIconColored}>{icon}</span> */}
+      <span className={styles.contactIconColored}>{icon}</span>
       <span className={styles.contacttxt}>{label}</span>
     </a>
   );

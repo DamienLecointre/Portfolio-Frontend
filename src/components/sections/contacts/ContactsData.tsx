@@ -20,7 +20,7 @@ const contactData: contactDataType = [
     icon: (
       <FontAwesomeIcon
         icon={faEnvelope}
-        style={{ height: "16px", width: "16px" }}
+        style={{ height: "20px", width: "20px" }}
       />
     ),
     label: "lecointre.d@gmail.com",
@@ -30,7 +30,7 @@ const contactData: contactDataType = [
     icon: (
       <FontAwesomeIcon
         icon={faMobileScreenButton}
-        style={{ height: "16px", width: "16px" }}
+        style={{ height: "20px", width: "20px" }}
       />
     ),
     label: "06 75 28 36 08",
@@ -40,7 +40,7 @@ const contactData: contactDataType = [
     icon: (
       <FontAwesomeIcon
         icon={faLinkedinIn}
-        style={{ height: "16px", width: "16px" }}
+        style={{ height: "20px", width: "20px" }}
       />
     ),
     label: "Mon Linkedin",
@@ -50,7 +50,7 @@ const contactData: contactDataType = [
     icon: (
       <FontAwesomeIcon
         icon={faGithub}
-        style={{ height: "16px", width: "16px" }}
+        style={{ height: "20px", width: "20px" }}
       />
     ),
     label: "Mon Github",

@@ -1,3 +1,14 @@
 .contactsContainer {
+  display: flex;
+  flex-direction: column;
   @include fullParentSize;
+  opacity: 0;
+  row-gap: $space24;
+  @include showElementOpacity1;
+}
+
+@keyframes showElementOpacity1 {
+  to {
+    opacity: 1;
+  }
 }
