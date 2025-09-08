@@ -1,5 +1,6 @@
 import Baseline from "@/components/sections/baseline/Baseline";
-import ContactsData from "../sections/contacts/ContactsData";
+import ContactsData from "@/components/sections/contacts/ContactsData";
+import DisplayScreensBtnData from "@/components/sections/nav/DisplayScreensBtnData";
 
 import styles from "@/styles/components/layout/Header.module.scss";
 
@@ -9,6 +10,7 @@ function Header() {
       <Baseline />
       <div className={styles.linksContainer}>
         <ContactsData />
+        <DisplayScreensBtnData />
       </div>
     </header>
   );

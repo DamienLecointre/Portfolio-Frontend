@@ -1,0 +1,21 @@
+.link {
+  width: fit-content;
+  position: relative;
+  @include desktopLinkXl;
+  letter-spacing: $letterSpacingSmall;
+  text-wrap: nowrap;
+
+  &::after {
+    @include pseudoElementContent;
+    height: 1px;
+    width: 0;
+    background: $accent;
+    left: 0;
+    bottom: 0;
+    transition: $mediumTransition;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

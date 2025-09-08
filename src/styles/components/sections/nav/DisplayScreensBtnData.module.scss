@@ -1,8 +1,9 @@
-.contactsContainer {
+.navContainer {
   height: 50%;
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   opacity: 0;
   row-gap: $space24;
   @include showElementOpacity1;
