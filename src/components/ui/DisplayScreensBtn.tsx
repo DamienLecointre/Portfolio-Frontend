@@ -9,7 +9,7 @@ type linkProps = {
 
 function DisplayScreensBtn({ linkTitle, link }: linkProps) {
   return (
-    <Link href={link} className={styles.link}>
+    <Link href={link} rel="noopener noreferrer" className={styles.link}>
       {linkTitle}
     </Link>
   );

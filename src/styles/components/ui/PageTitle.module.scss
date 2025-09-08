@@ -16,13 +16,15 @@
 
 .subTitleWrapper {
   position: absolute;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  transform: translateY(58px);
+  transform: translate(0, 58px);
   z-index: 10;
 }
 
 .subTitle {
+  width: fit-content;
   @include desktopTitleH1Xl;
   line-height: $lineHeight64;
 }
@@ -33,9 +35,73 @@
 }
 
 .pageTitle {
-  width: fit-content;
+  width: 100%;
   @include desktopTitleH2Xl;
   line-height: $lineHeight110;
   transform: translateX(-20px);
   z-index: 0;
+}
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 1250px) {
+
+  .subTitleWrapper {
+    transform: translate(-6px, 39px);
+  }
+
+  .subTitle {
+    font-size: 2.5rem;
+    transform: translate(6px, 0);
+  }
+
+  .functionTitle {
+    font-size: 1.2rem;
+    transform: translate(7px, 0);
+  }
+
+  .pageTitle {
+    font-size: 10rem;
+    transform: translateX(-15px);
+  }
+}
+
+@media (max-width: 990px) {
+
+  .subTitleWrapper {
+    transform: translate(-11px, 25px);
+  }
+
+  .subTitle {
+    font-size: $fontSize24;
+    line-height: 40px;
+    transform: translate(11px, 0);
+  }
+
+  .functionTitle {
+    font-size: 0.75rem;
+    transform: translate(12px, 0);
+  }
+
+  .pageTitle {
+    font-size: 6.4rem;
+    transform: translateX(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    align-items: center;
+  }
+
+  .functionTitle {
+    font-size: $fontSize16;
+    text-align: center;
+  }
+
+  .pageTitle {
+    font-size: $fontSize86;
+  }
 }

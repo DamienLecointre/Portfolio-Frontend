@@ -11,17 +11,19 @@ $color-medium-dark: #525252;
 $color-light-dark: #bdbdbd;
 
 //FONT SIZES
-$fontSize224: 14em;
+$fontSize224: 14rem;
+$fontSize86: 5.375rem;
 $fontSize150: 9.375em;
+$fontSize86: 5.375rem;
 $fontSize58: 3.625rem;
-$fontSize48: 3em;
+$fontSize48: 3rem;
 $fontSize30: 1.875rem;
-$fontSize28: 1.75em;
-$fontSize24: 1.5em;
-$fontSize18: 1.125em;
-$fontSize20: 1.25em;
-$fontSize16: 1em;
-$fontSize12: 0.75em;
+$fontSize28: 1.75rem;
+$fontSize24: 1.5rem;
+$fontSize18: 1.125rem;
+$fontSize20: 1.25rem;
+$fontSize16: 1rem;
+$fontSize12: 0.75rem;
 
 //FONT WEIGHT
 $fontWeightLight300: 300;
@@ -38,6 +40,7 @@ $lineHeight110: 110px;
 $letterSpacingSmall: 0.15em;
 
 //TEXT MIXINS
+//DESKTOP
 @mixin introTxtSetup {
   font-size: 1.2em;
   font-weight: 400;
@@ -108,4 +111,3 @@ $letterSpacingSmall: 0.15em;
   font-size: $fontSize16;
   font-weight: $fontWeightLight300;
 }
-

@@ -48,3 +48,19 @@
     transform: translateY(0);
   }
 }
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 990px) {
+  .baseline {
+    font-size: .6rem;
+  }
+}
+
+@media (max-width: 768px)  {
+  .baselineContainer {
+    display: none;
+  }
+}

@@ -19,3 +19,27 @@
     width: 100%;
   }
 }
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 990px) {
+  .link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px)  {
+  .link {
+    width: 100%;
+    text-align: center;
+    border: 1px solid $accent;
+    padding: $btnSpace14 $btnSpace32;
+    border-radius: 150px;
+
+    &::after {
+      display: none;
+    }
+  }
+}

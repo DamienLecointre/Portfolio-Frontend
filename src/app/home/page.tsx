@@ -1,11 +1,19 @@
+"use client";
+
+import { useIsMobile } from "@/hooks/useIsMobile";
+
+import BurgerMenu from "@/components/ui/BurgerMenu";
 import PageTitle from "@/components/ui/PageTitle";
 import Header from "@/components/layout/Header";
 
 import styles from "@/styles/pages/Home.module.scss";
 
 function HomePage() {
+  const isMobile = useIsMobile(768);
+
   return (
     <div className={styles.pageContainer}>
+      {isMobile && <BurgerMenu />}
       <PageTitle dynamicTitle="Portfolio" />
       <Header />
     </div>

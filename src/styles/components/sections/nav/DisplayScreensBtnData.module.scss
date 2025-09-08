@@ -14,3 +14,16 @@
     opacity: 1;
   }
 }
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 768px) {
+  .navContainer {
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: $space32;
+  }
+}
