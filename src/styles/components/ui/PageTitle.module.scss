@@ -18,11 +18,13 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  transform: translateY(58px);
+  z-index: 10;
 }
 
 .subTitle {
   @include desktopTitleH1Xl;
-  z-index: 10;
+  line-height: $lineHeight64;
 }
 
 .functionTitle {
@@ -34,6 +36,6 @@
   width: fit-content;
   @include desktopTitleH2Xl;
   line-height: $lineHeight110;
-  transform: translateX(-21px);
+  transform: translateX(-20px);
   z-index: 0;
 }
