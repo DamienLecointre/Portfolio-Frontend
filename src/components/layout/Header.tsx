@@ -9,8 +9,8 @@ function Header() {
     <header className={styles.headerContainer}>
       <Baseline />
       <div className={styles.linksContainer}>
-        <ContactsData />
-        <DisplayScreensBtnData />
+        <ContactsData location="default" />
+        <DisplayScreensBtnData location="default" />
       </div>
     </header>
   );

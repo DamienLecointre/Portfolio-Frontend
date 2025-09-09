@@ -57,11 +57,20 @@ const contactData: contactDataType = [
     link: "https://github.com/DamienLecointre",
   },
 ];
-function ContactsData() {
+
+type Props = {
+  location?: string;
+};
+
+function ContactsData({ location }: Props) {
   return (
-    <div className={styles.contactsContainer}>
+    <div
+      className={`${location === "default" ? styles.contactsContainer : ""} ${
+        location === "BurgerMenuDisplay" ? styles.burgerContactsContainer : ""
+      }`}
+    >
       {contactData.map((item, index) => (
-        <ContactItem key={index} {...item} />
+        <ContactItem key={index} {...item} location={location} />
       ))}
     </div>
   );

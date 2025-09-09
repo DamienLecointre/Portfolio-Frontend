@@ -3,12 +3,14 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  z-index: 500;
 }
 
 .burgerMenuWrapper {
   position: relative;
   height: 24px;
   width: 24px;
+  overflow: hidden;
 }
 
 .line {
@@ -21,14 +23,47 @@
 
 .lineTop {
   top: 5px;
+  transform: rotate(0);
+  transform-origin: top left;
+  transition: $mediumTransition;
+}
+
+.lineTopRotate {
+  width: 100%;
+  background: $color-white;
+  top: 10px;
+  transform: rotate(45deg);
+  // transform-origin: top left;
+  transition: $mediumTransition;
 }
 
 .lineMid {
   top: 50%;
   right: 0;
+  opacity: 1;
   transform: translate(0, -50%);
+  transition: $speedTransition;
+}
+
+.lineMidHidden {
+  top: 50%;
+  opacity: 0;
+  transform: translate(100%, -50%);
+  transition: $speedTransition;
 }
 
 .lineBot {
   bottom: 5px;
+  transform: rotate(0);
+  transform-origin: bottom left;
+  transition: $mediumTransition;
+}
+
+.lineBotRotate {
+  width: 100%;
+  background: $color-white;
+  top: 10px;
+  transform: rotate(-45deg);
+  // transform-origin: top left;
+  transition: $mediumTransition;
 }

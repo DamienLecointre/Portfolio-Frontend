@@ -1,13 +1,25 @@
 import type { Metadata } from "next";
+
+import { BurgerProvider } from "@/components/utils/BurgerContext";
+
 import "@/styles/index.scss";
 
 export const metadata: Metadata = {
   title: "Damien Lecointre | Développeur web React, Next.js & Typescript",
-  description: "Développeur web spécialisé en React, Next.js et TypeScript. Je conçois des sites et applications modernes, adaptées à vos besoins.",
-  keywords: ["Développeur Web","Développeur Web full stack", "React", "Next.js", "TypeScript", "Portfolio"],
+  description:
+    "Développeur web spécialisé en React, Next.js et TypeScript. Je conçois des sites et applications modernes, adaptées à vos besoins.",
+  keywords: [
+    "Développeur Web",
+    "Développeur Web full stack",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Portfolio",
+  ],
   openGraph: {
     title: "Damien Lecointre | Développeur web React, Next.js & Typescript",
-    description: "Développeur web spécialisé en React, Next.js et TypeScript, je crée des sites et applications modernes, performants et pensés pour vos besoins.",
+    description:
+      "Développeur web spécialisé en React, Next.js et TypeScript, je crée des sites et applications modernes, performants et pensés pour vos besoins.",
     url: "https://ton-domaine.com",
     siteName: "Damien Lecointre Portfolio",
     images: [
@@ -24,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Damien Lecointre | Développeur React, Next.js & Typescript",
-    description: "Portfolio de Damien Lecointre, développeur web spécialiste React, Next.js et TypeScript.",
+    description:
+      "Portfolio de Damien Lecointre, développeur web spécialiste React, Next.js et TypeScript.",
     images: ["https://ton-domaine.com/preview.png"],
   },
   alternates: {
@@ -40,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        {children}
+        <BurgerProvider>{children}</BurgerProvider>
       </body>
     </html>
   );

@@ -1,0 +1,29 @@
+.burgerMenuDisplayContainer {
+  position: absolute;
+  @include fullScreenSize;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 0;
+  left: 100%;
+  background: $accent;
+  padding: $mobilePaddingTopBot 20px;
+  z-index: 100;
+  transition: $mediumTransition;
+}
+
+.active {
+  left: 0;
+}
+
+.lineContainer {
+  width: 100%;
+}
+
+.line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: $white;
+  margin: $space32 0;
+}

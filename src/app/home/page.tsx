@@ -3,6 +3,7 @@
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 import BurgerMenu from "@/components/ui/BurgerMenu";
+import BurgerMenuDisplay from "@/components/layout/BurgerMenuDisplay";
 import PageTitle from "@/components/ui/PageTitle";
 import Header from "@/components/layout/Header";
 
@@ -13,7 +14,12 @@ function HomePage() {
 
   return (
     <div className={styles.pageContainer}>
-      {isMobile && <BurgerMenu />}
+      {isMobile && (
+        <>
+          <BurgerMenu />
+          <BurgerMenuDisplay />
+        </>
+      )}
       <PageTitle dynamicTitle="Portfolio" />
       <Header />
     </div>

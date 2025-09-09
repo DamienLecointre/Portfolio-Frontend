@@ -6,19 +6,32 @@ type ContactItemProps = {
   icon: ReactElement;
   label: string;
   link?: string;
+  location?: string;
 };
 
-function ContactsItem({ icon, label, link }: ContactItemProps) {
+function ContactsItem({ icon, label, link, location }: ContactItemProps) {
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className={styles.linkContainer}
+      className={`${location === "default" ? styles.linkContainer : ""} ${
+        location === "BurgerMenuDisplay" ? styles.burgerLinkContainer : ""
+      }`}
     >
       <span className={styles.contactIcon}>{icon}</span>
-      <span className={styles.contactIconColored}>{icon}</span>
-      <span className={styles.contacttxt}>{label}</span>
+      {location === "default" ? (
+        <span className={styles.contactIconColored}>{icon}</span>
+      ) : (
+        ""
+      )}
+      <span
+        className={`${location === "default" ? styles.contacttxt : ""} ${
+          location === "BurgerMenuDisplay" ? styles.burgerContacttxt : ""
+        }`}
+      >
+        {label}
+      </span>
     </a>
   );
 }
