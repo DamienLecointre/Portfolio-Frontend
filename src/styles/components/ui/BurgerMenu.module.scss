@@ -32,7 +32,7 @@
   width: 100%;
   background: $color-white;
   top: 10px;
-  transform: rotate(45deg);
+  transform: rotate(225deg);
   // transform-origin: top left;
   transition: $mediumTransition;
 }
@@ -63,7 +63,7 @@
   width: 100%;
   background: $color-white;
   top: 10px;
-  transform: rotate(-45deg);
+  transform: rotate(-225deg);
   // transform-origin: top left;
   transition: $mediumTransition;
 }

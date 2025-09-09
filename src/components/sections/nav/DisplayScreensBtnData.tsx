@@ -6,12 +6,13 @@ type Props = {
   location?: string;
 };
 
+const navData = [
+  { linkTitle: "Mon histoire", link: "/mon-histoire" },
+  { linkTitle: "Mes expériences", link: "/mes-experiences" },
+  { linkTitle: "Mes réalisations", link: "/mes-realisations" },
+];
+
 function DisplayScreensBtnData({ location }: Props) {
-  const navData = [
-    { linkTitle: "Mon histoire", link: "/mon-histoire" },
-    { linkTitle: "Mes expériences", link: "/mes-experiences" },
-    { linkTitle: "Mes réalisations", link: "/mes-realisations" },
-  ];
   return (
     <nav
       className={`${location === "default" ? styles.navContainer : ""} ${

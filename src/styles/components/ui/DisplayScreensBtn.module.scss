@@ -26,13 +26,18 @@
   outline: none;
 }
 
+.activeLink {
+  color: $color-accent;
+  font-weight: 600;
+}
+
 // ---------------------------------------------------------
 // MEDIA QUERRIES
 // ---------------------------------------------------------
 
 @media (max-width: 990px) {
   .link {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 

@@ -7,7 +7,7 @@ import BurgerMenuDisplay from "@/components/layout/BurgerMenuDisplay";
 import PageTitle from "@/components/ui/PageTitle";
 import Header from "@/components/layout/Header";
 
-import styles from "@/styles/pages/Home.module.scss";
+import styles from "@/styles/pages/SitePageSetup.module.scss";
 
 function HomePage() {
   const isMobile = useIsMobile(768);

@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+
+import useCurrentPage from "@/hooks/useCurrentPage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
@@ -12,13 +16,16 @@ type linkProps = {
 };
 
 function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
+  const isActive = useCurrentPage(link);
+
   return (
     <Link
       href={link}
       rel="noopener noreferrer"
-      className={`${
-        location === "BurgerMenuDisplay" ? styles.burgerMenuLink : ""
-      } ${location === "default" ? styles.link : ""} `}
+      className={`
+        ${location === "default" ? styles.link : ""} 
+        ${location === "BurgerMenuDisplay" ? styles.burgerMenuLink : ""} 
+        ${isActive ? styles.activeLink : ""} `}
     >
       {linkTitle}
       {location === "BurgerMenuDisplay" && (
