@@ -20,7 +20,7 @@ function HomePage() {
           <BurgerMenuDisplay />
         </>
       )}
-      <PageTitle dynamicTitle="Portfolio" />
+      <PageTitle dynamicTitle="Portfolio" location="home" />
       <Header />
     </div>
   );

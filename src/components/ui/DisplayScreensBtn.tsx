@@ -23,7 +23,7 @@ function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
       href={link}
       rel="noopener noreferrer"
       className={`
-        ${location === "default" ? styles.link : ""} 
+        ${location === "home" ? styles.link : ""} 
         ${location === "BurgerMenuDisplay" ? styles.burgerMenuLink : ""} 
         ${isActive ? styles.activeLink : ""} `}
     >

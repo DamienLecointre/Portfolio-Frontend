@@ -65,7 +65,7 @@ type Props = {
 function ContactsData({ location }: Props) {
   return (
     <div
-      className={`${location === "default" ? styles.contactsContainer : ""} ${
+      className={`${location === "home" ? styles.contactsContainer : ""} ${
         location === "BurgerMenuDisplay" ? styles.burgerContactsContainer : ""
       }`}
     >

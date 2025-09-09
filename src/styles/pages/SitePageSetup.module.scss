@@ -1,8 +1,30 @@
+.homePageContainer {
+  @include fullScreenSize;
+  display: flex;
+  background: $black;
+  padding: $pagePaddingTopBot $pagePaddingLeftRight;
+}
+
 .pageContainer {
   @include fullScreenSize;
   display: flex;
   background: $black;
   padding: $pagePaddingTopBot $pagePaddingLeftRight;
+  column-gap: $space56;
+}
+
+.contentContainer {
+  @include fullParentSize;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.txtContainer {
+  @include fullParentSize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // ---------------------------------------------------------

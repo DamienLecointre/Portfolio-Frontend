@@ -15,7 +15,7 @@ const navData = [
 function DisplayScreensBtnData({ location }: Props) {
   return (
     <nav
-      className={`${location === "default" ? styles.navContainer : ""} ${
+      className={`${location === "home" ? styles.navContainer : ""} ${
         location === "BurgerMenuDisplay" ? styles.burgerNavContainer : ""
       }`}
     >

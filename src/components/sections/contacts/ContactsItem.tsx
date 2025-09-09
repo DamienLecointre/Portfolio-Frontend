@@ -15,18 +15,18 @@ function ContactsItem({ icon, label, link, location }: ContactItemProps) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${location === "default" ? styles.linkContainer : ""} ${
+      className={`${location === "home" ? styles.linkContainer : ""} ${
         location === "BurgerMenuDisplay" ? styles.burgerLinkContainer : ""
       }`}
     >
       <span className={styles.contactIcon}>{icon}</span>
-      {location === "default" ? (
+      {location === "home" ? (
         <span className={styles.contactIconColored}>{icon}</span>
       ) : (
         ""
       )}
       <span
-        className={`${location === "default" ? styles.contacttxt : ""} ${
+        className={`${location === "home" ? styles.contacttxt : ""} ${
           location === "BurgerMenuDisplay" ? styles.burgerContacttxt : ""
         }`}
       >
