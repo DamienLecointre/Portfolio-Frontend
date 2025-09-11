@@ -14,6 +14,11 @@
   }
 }
 
+.titleContainer {
+  opacity: 0;
+  @include showElementOpacity1;
+}
+
 .homeSubTitleWrapper {
   position: absolute;
   width: 100%;

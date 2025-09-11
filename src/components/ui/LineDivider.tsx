@@ -1,8 +1,18 @@
 import styles from "@/styles/components/ui/LineDivider.module.scss";
 
-function LineDivider() {
+type Props = {
+  lineDivider?: string;
+};
+
+function LineDivider({ lineDivider }: Props) {
   return (
-    <div className={styles.lineContainer}>
+    <div
+      className={
+        lineDivider === "lineTopDivider"
+          ? styles.lineTopContainer
+          : styles.lineContainer
+      }
+    >
       <div className={styles.line}></div>
     </div>
   );

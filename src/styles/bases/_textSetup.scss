@@ -32,6 +32,7 @@ $fontWeightMedium500: 500;
 $fontWeightSemiBold600: 600;
 
 //LINE HEIGHT
+$lineHeight32: 32px;
 $lineHeight42: 42px;
 $lineHeight64: 64px;
 $lineHeight110: 110px;
@@ -99,7 +100,7 @@ $letterSpacingSmall: 0.15em;
 @mixin desktopParagraphXl {
   font-size: $fontSize18;
   font-weight: $fontWeightRegular400;
-  line-height: $lineHeight42;
+  line-height: $lineHeight32;
 }
 
 @mixin desktopLinkXl {

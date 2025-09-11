@@ -40,10 +40,10 @@
   width: 1px;
   background: $accent;
   transform: translateY(100%);
-  animation: showCopyrightUnderline 2s ease-in-out forwards;
+  @include showOrangeLine
 }
 
-@keyframes showCopyrightUnderline {
+@keyframes showOrangeLine {
   to {
     transform: translateY(0);
   }

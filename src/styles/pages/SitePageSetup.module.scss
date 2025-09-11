@@ -21,10 +21,38 @@
 }
 
 .txtContainer {
+  position: relative;
   @include fullParentSize;
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
+  overflow-y: hidden;
+}
+
+.quoteIcon {
+  position: absolute;
+  // position: relative;
+  font-size: 30em;
+  color: $color-accent;
+  opacity: 0;
+  z-index: 0;
+  @include showElementOpacity1;
+}
+
+@keyframes showElementOpacity1 {
+  to {
+    opacity: .2;
+  }
+}
+
+.quoteIconTop {
+  top: -30%;
+  left: 10%;
+  transform: rotate(180deg);
+}
+
+.storytellingDataContainer {
+  @include fullParentSize;
 }
 
 // ---------------------------------------------------------

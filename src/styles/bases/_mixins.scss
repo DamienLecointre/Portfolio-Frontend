@@ -1,7 +1,4 @@
-@mixin pseudoElementContent {
-  content: "";
-  position: absolute;
-}
+//SIZES
 
 @mixin fullScreenSize {
   height: 100vh;
@@ -13,12 +10,25 @@
   width: 100%;
 }
 
+//POSITIONS
+
+@mixin pseudoElementContent {
+  content: "";
+  position: absolute;
+}
+
 @mixin centerChildren {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+//ANIMATIONS
+
 @mixin showElementOpacity1 {
   animation: showElementOpacity1 3s ease-in-out forwards ;
+}
+
+@mixin showOrangeLine {
+  animation: showOrangeLine 2s ease-in-out forwards;
 }
