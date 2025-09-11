@@ -31,28 +31,21 @@
 
 .quoteIcon {
   position: absolute;
-  // position: relative;
-  font-size: 30em;
+  height: 100%;
+  width: 100%;
   color: $color-accent;
+  top: 50%;
+  left: 50%;
   opacity: 0;
   z-index: 0;
+  transform: translate(-50%,-50%);
   @include showElementOpacity1;
 }
 
 @keyframes showElementOpacity1 {
   to {
-    opacity: .2;
+    opacity: .25;
   }
-}
-
-.quoteIconTop {
-  top: -30%;
-  left: 10%;
-  transform: rotate(180deg);
-}
-
-.storytellingDataContainer {
-  @include fullParentSize;
 }
 
 // ---------------------------------------------------------

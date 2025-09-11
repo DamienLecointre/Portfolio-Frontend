@@ -6,7 +6,7 @@ import styles from "@/styles/components/sections/loading/IntroductionTxt.module.
 
 const sentences = [
   ["Je m'appelle", "Damien Lecointre"],
-  ["Je suis", "Développeur web full stack"],
+  ["Je suis", "Développeur web React & Next"],
   ["Bienvenue sur", "mon portfolio"],
 ];
 

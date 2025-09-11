@@ -7,7 +7,7 @@ import LineDivider from "@/components/ui/LineDivider";
 import StorytellingData from "@/components/sections/storytelling/StorytellingData";
 import Header from "@/components/layout/Header";
 
-import { MdFormatQuote } from "react-icons/md";
+import { IoChatboxEllipsesOutline } from "react-icons/io5";
 
 import styles from "@/styles/pages/SitePageSetup.module.scss";
 
@@ -23,9 +23,7 @@ function HistoirePage() {
         <PageTitle dynamicTitle="Mon histoire" location="history" />
         <LineDivider lineDivider="lineTopDivider" />
         <div className={styles.txtContainer}>
-          <MdFormatQuote
-            className={`${styles.quoteIcon} ${styles.quoteIconTop}`}
-          />
+          <IoChatboxEllipsesOutline className={styles.quoteIcon} />
           <StorytellingData />
         </div>
         <LineDivider />
