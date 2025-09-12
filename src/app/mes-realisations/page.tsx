@@ -2,7 +2,7 @@ import Header from "@/components/layout/Header";
 
 import styles from "@/styles/pages/SitePageSetup.module.scss";
 
-function realisationsPage() {
+function RealisationsPage() {
   return (
     <div className={styles.pageContainer}>
       <h1>realisationsPage</h1>
@@ -11,4 +11,4 @@ function realisationsPage() {
   );
 }
 
-export default realisationsPage;
+export default RealisationsPage;

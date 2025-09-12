@@ -30,7 +30,7 @@ function HistoirePage() {
         </>
       )}
       <div className={styles.contentContainer}>
-        <PageTitle dynamicTitle="Mon histoire" location="history" />
+        <PageTitle dynamicTitle="Mon histoire" />
         <LineDivider lineDivider="lineTopDivider" />
         <div className={styles.txtContainer}>
           {isMobile && <div className={styles.gradientContainer}></div>}
