@@ -1,5 +1,5 @@
 .storytellingContainer {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -18,7 +18,7 @@
 }
 
 .storytellingContainer::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 .storytellingContainer::-webkit-scrollbar-track {
@@ -28,4 +28,27 @@
 .storytellingContainer::-webkit-scrollbar-thumb {
   background: $accent;
   border-radius: 150px;
+}
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 1050px) {
+
+  .storytellingContainer {
+    width: 100%;
+    padding: 0 $space8;
+  }
+
+  @media (max-width: 768px) {
+
+    .storytellingContainer {
+    padding: 0 0 48px 0;
+  }
+
+    .storytellingContainer::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

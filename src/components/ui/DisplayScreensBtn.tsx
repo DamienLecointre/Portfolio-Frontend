@@ -25,7 +25,9 @@ function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
       className={`
         ${location === "home" ? styles.link : ""} 
         ${location === "BurgerMenuDisplay" ? styles.burgerMenuLink : ""} 
-        ${isActive ? styles.activeLink : ""} `}
+        ${
+          isActive && location !== "BurgerMenuDisplay" ? styles.activeLink : ""
+        } `}
     >
       {linkTitle}
       {location === "BurgerMenuDisplay" && (

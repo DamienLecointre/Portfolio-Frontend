@@ -8,7 +8,6 @@
   padding-top: $space48;
 }
 
-
 .line {
   height: 1px;
   width: 0;
@@ -19,5 +18,20 @@
 @keyframes showOrangeLine {
   to {
     width: 100%;
+  }
+}
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 1050px) {
+
+  .lineTopContainer {
+    padding: 40px 0 24px;
+  }
+
+  .lineContainer {
+    padding: $space24 0;
   }
 }

@@ -34,7 +34,7 @@ const contactData: contactDataType = [
       />
     ),
     label: "06 75 28 36 08",
-    link: "telto:+33675283608",
+    link: "tel:+33675283608",
   },
   {
     icon: (

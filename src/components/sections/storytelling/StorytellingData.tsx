@@ -18,7 +18,7 @@ const storytellingContent: storytellingContentType = [
   },
   {
     id: 3,
-    text: "Pas besoin de maîtriser le langage technique : je simplifie chaque étape pour que tout reste compréhensible et transparent, dans le respect de votre budget.",
+    text: "Pas besoin de maîtriser le langage technique. Je simplifie chaque étape pour que tout reste compréhensible et transparent, dans le respect de votre budget.",
   },
   {
     id: 4,
