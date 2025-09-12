@@ -10,19 +10,23 @@ type storytellingContentType = {
 const storytellingContent: storytellingContentType = [
   {
     id: 1,
-    text: "Formé aux technologies modernes du web (React, Next.js, TypeScript, Redux, Express), je conçois et développe des sites et applications performants, adaptés aux besoins de mes clients.",
+    text: "Chaque projet naît d'une idée. Mon rôle est de vous accompagner pour la transformer en un site professionnel et efficace, fidèle à vos besoins.",
   },
   {
     id: 2,
-    text: "Mon parcours m'a permis d'acquérir des compétences clés que j'applique aujourd'hui au développement web : sens du détail, organisation rigoureuse, gestion de projet et capacité à collaborer efficacement avec différents interlocuteurs.",
+    text: "Je prends en charge l'ensemble du processus : conception graphique, développement et mise en ligne.",
   },
   {
     id: 3,
-    text: "Je suis particulièrement attentif à l'expérience utilisateur et à la qualité du rendu visuel, tout en veillant à la solidité technique du projet, côté front-end comme back-end.",
+    text: "Pas besoin de maîtriser le langage technique : je simplifie chaque étape pour que tout reste compréhensible et transparent, dans le respect de votre budget.",
   },
   {
     id: 4,
-    text: "Mon objectif : accompagner mes clients dans la création d'outils digitaux sur-mesure, modernes et évolutifs.",
+    text: "Mon objectif est de rendre la création de votre site web simple et agréable, et de vous livrer une solution prête à l'emploi.",
+  },
+  {
+    id: 5,
+    text: "Vous avez un projet ? Parlons-en et voyons comment le concrétiser ensemble.",
   },
 ];
 

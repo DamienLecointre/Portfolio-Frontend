@@ -32,7 +32,7 @@ function PageTitle({ dynamicTitle, location }: PageTitleProps) {
               : styles.functionTitle
           }`}
         >
-          Développeur web React & Next
+          Développeur web full stack
         </span>
       </h1>
       <h2

@@ -18,8 +18,11 @@
 }
 
 .storytellingContainer::-webkit-scrollbar {
-  width: 4px;
-  background: transparent;
+  width: 10px;
+}
+
+.storytellingContainer::-webkit-scrollbar-track {
+  margin-right: 150px;
 }
 
 .storytellingContainer::-webkit-scrollbar-thumb {
