@@ -1,0 +1,10 @@
+.formationsContainer {
+  height: 100%;
+  width: 50%;
+}
+
+.title {
+  @include desktopTitleH3;
+  letter-spacing: $letterSpacingSmall;
+  padding-bottom: $space24;
+}

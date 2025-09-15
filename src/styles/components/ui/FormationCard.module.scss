@@ -1,0 +1,49 @@
+.formationCardContainer {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  column-gap: $space16;
+}
+
+.datesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 40px;
+  padding: $space8 0;
+}
+
+.text,
+.startDate,
+.endDate {
+  @include desktopTitleH5;
+}
+
+.endDate {
+  color: $color-accent;
+}
+
+.dividerContainer {
+  position: relative;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  background: $accent;
+}
+
+.dote {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: $accent;
+  border-radius: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.detailsContainer {
+  padding: $space8 0;
+}
