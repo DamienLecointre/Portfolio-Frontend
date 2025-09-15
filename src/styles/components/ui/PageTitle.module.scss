@@ -11,12 +11,17 @@
 .titleContainer {
   opacity: 0;
   @include showElementOpacity1;
+  transition: opacity 1s ease
 }
 
 @keyframes showElementOpacity1 {
   to {
     opacity: 1;
   }
+}
+
+.fadeOut {
+  opacity: 0;
 }
 
 .homeSubTitleWrapper,

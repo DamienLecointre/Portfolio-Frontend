@@ -29,6 +29,10 @@
   animation: showElementOpacity1 3s ease-in-out forwards ;
 }
 
+@mixin hiddenElementOpacity0 {
+  animation: hiddenElementOpacity0 1s ease-in-out forwards ;
+}
+
 @mixin showOrangeLine {
   animation: showOrangeLine 2s ease-in-out forwards;
 }

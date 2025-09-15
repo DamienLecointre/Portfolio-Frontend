@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import useCurrentPage from "@/hooks/useCurrentPage";
 import { useBurger } from "../utils/BurgerContext";
@@ -17,8 +18,28 @@ type linkProps = {
 };
 
 function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
+  const router = useRouter();
   const isActive = useCurrentPage(link);
   const { closeMenu } = useBurger();
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location !== "BurgerMenuDisplay") {
+      router.push(link);
+    }
+
+    if (location === "BurgerMenuDisplay") {
+      closeMenu();
+    }
+
+    setTimeout(() => {
+      if (location === "BurgerMenuDisplay") {
+        router.push(link);
+      }
+    }, 400);
+
+    console.log(linkTitle);
+  };
 
   return (
     <Link
@@ -30,7 +51,7 @@ function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
         ${
           isActive && location !== "BurgerMenuDisplay" ? styles.activeLink : ""
         } `}
-      onClick={location === "BurgerMenuDisplay" ? closeMenu : undefined}
+      onClick={handleClick}
     >
       {linkTitle}
       {location === "BurgerMenuDisplay" && (
