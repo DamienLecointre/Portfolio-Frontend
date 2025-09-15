@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 import useCurrentPage from "@/hooks/useCurrentPage";
+import { useBurger } from "../utils/BurgerContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
@@ -17,6 +18,7 @@ type linkProps = {
 
 function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
   const isActive = useCurrentPage(link);
+  const { closeMenu } = useBurger();
 
   return (
     <Link
@@ -28,6 +30,7 @@ function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
         ${
           isActive && location !== "BurgerMenuDisplay" ? styles.activeLink : ""
         } `}
+      onClick={location === "BurgerMenuDisplay" ? closeMenu : undefined}
     >
       {linkTitle}
       {location === "BurgerMenuDisplay" && (

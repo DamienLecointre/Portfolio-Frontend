@@ -6,6 +6,7 @@ import { createContext, useState, useContext, ReactNode } from "react";
 type BurgerContextType = {
   isActive: boolean;
   toggleMenu: () => void;
+  closeMenu: () => void;
 };
 
 const BurgerContext = createContext<BurgerContextType | undefined>(undefined);
@@ -14,9 +15,10 @@ export function BurgerProvider({ children }: { children: ReactNode }) {
   const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => setIsActive(!isActive);
+  const closeMenu = () => setIsActive(false);
 
   return (
-    <BurgerContext.Provider value={{ isActive, toggleMenu }}>
+    <BurgerContext.Provider value={{ isActive, toggleMenu, closeMenu }}>
       {children}
     </BurgerContext.Provider>
   );
