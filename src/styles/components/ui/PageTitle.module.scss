@@ -8,18 +8,19 @@
   @include showElementOpacity1;
 }
 
+.titleContainer {
+  opacity: 0;
+  @include showElementOpacity1;
+}
+
 @keyframes showElementOpacity1 {
   to {
     opacity: 1;
   }
 }
 
-.titleContainer {
-  opacity: 0;
-  @include showElementOpacity1;
-}
-
-.homeSubTitleWrapper {
+.homeSubTitleWrapper,
+.subTitleWrapper {
   position: absolute;
   width: 100%;
   display: flex;
@@ -29,34 +30,28 @@
 }
 
 .subTitleWrapper {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   transform: translate(0, 64px);
-  z-index: 10;
 }
 
-.homeSubTitle {
+.homeSubTitle,
+.subTitle {
   width: fit-content;
   @include desktopTitleH1Xl;
   line-height: $lineHeight64;
 }
 
 .subTitle {
-  width: fit-content;
   @include desktopTitleH1L;
-  line-height: $lineHeight64;
 }
 
-.homeFunctionTitle {
+.homeFunctionTitle,
+.functionTitle {
   @include desktopTitleH1M;
   color: $color-accent;
 }
 
 .functionTitle {
   @include desktopTitleH1S;
-  color: $color-accent;
 }
 
 .homePageTitle {

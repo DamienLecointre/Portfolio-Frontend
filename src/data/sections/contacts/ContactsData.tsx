@@ -1,13 +1,9 @@
 import { ReactElement } from "react";
 
-import ContactItem from "@/components/sections/contacts/ContactsItem";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faMobileScreenButton } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
-
-import styles from "@/styles/components/sections/contacts/ContactsData.module.scss";
 
 type contactDataType = {
   icon: ReactElement;
@@ -57,23 +53,8 @@ const contactData: contactDataType = [
     link: "https://github.com/DamienLecointre",
   },
 ];
-
-type Props = {
-  location?: string;
-};
-
-function ContactsData({ location }: Props) {
-  return (
-    <div
-      className={`${location === "home" ? styles.contactsContainer : ""} ${
-        location === "BurgerMenuDisplay" ? styles.burgerContactsContainer : ""
-      }`}
-    >
-      {contactData.map((item, index) => (
-        <ContactItem key={index} {...item} location={location} />
-      ))}
-    </div>
-  );
+function ContactsData() {
+  return contactData;
 }
 
 export default ContactsData;

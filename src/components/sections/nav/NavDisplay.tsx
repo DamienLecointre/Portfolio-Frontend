@@ -1,18 +1,14 @@
+import DataScreensDisplayBtn from "@/data/sections/nav/DataScreensDisplayBtn";
 import DisplayScreensBtn from "@/components/ui/DisplayScreensBtn";
 
-import styles from "@/styles/components/sections/nav/DisplayScreensBtnData.module.scss";
+import styles from "@/styles/components/sections/nav/NavDisplay.module.scss";
 
 type Props = {
   location?: string;
 };
 
-const navData = [
-  { linkTitle: "Mon histoire", link: "/mon-histoire" },
-  { linkTitle: "Mes expériences", link: "/mes-experiences" },
-  { linkTitle: "Mes réalisations", link: "/mes-realisations" },
-];
-
-function DisplayScreensBtnData({ location }: Props) {
+function NavDisplay({ location }: Props) {
+  const navData = DataScreensDisplayBtn();
   return (
     <nav
       className={`${location === "home" ? styles.navContainer : ""} ${
@@ -26,4 +22,4 @@ function DisplayScreensBtnData({ location }: Props) {
   );
 }
 
-export default DisplayScreensBtnData;
+export default NavDisplay;

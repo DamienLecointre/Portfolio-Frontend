@@ -2,21 +2,16 @@
 
 import { useEffect, useState } from "react";
 
-import styles from "@/styles/components/sections/loading/IntroductionTxt.module.scss";
+import IntroductionTxtData from "@/data/sections/loading/IntroductionTxtData";
 
-const sentences = [
-  ["Je m'appelle", "Damien Lecointre"],
-  ["Je suis", "Développeur web full stack"],
-  ["Bienvenue sur", "mon portfolio"],
-];
+import styles from "@/styles/components/sections/loading/IntroductionTxt.module.scss";
 
 function IntroductionTxt() {
   const [currentSentence, setCurrentSentence] = useState(0);
   const [stage, setStage] = useState(0);
+  const sentences = IntroductionTxtData();
 
   useEffect(() => {
-    // if (currentSentence === sentences.length - 1 && stage === 4) return;
-
     const timeouts: NodeJS.Timeout[] = [];
 
     timeouts.push(setTimeout(() => setStage(1), 100));
@@ -40,7 +35,7 @@ function IntroductionTxt() {
     );
 
     return () => timeouts.forEach(clearTimeout);
-  }, [currentSentence]);
+  }, [currentSentence, sentences]);
 
   return (
     <div className={styles.container}>

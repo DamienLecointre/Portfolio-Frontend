@@ -1,20 +1,20 @@
 .burgerMenuDisplayContainer {
-  position: absolute;
-  height: 100dvh;
-  width: 100dvw;
+  position: fixed;
+  @include fullScreenSize;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   top: 0;
-  left: 100%;
+  left: 0;
   background: $accent;
   padding: $mobilePaddingTopBot 20px;
   z-index: 100;
   transition: $mediumTransition;
+  transform: translateX(100%);
 }
 
 .active {
-  left: 0;
+  transform: translateX(0);
 }
 
 .lineContainer {

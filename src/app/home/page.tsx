@@ -13,7 +13,7 @@ function HomePage() {
   const isMobile = useIsMobile(768);
 
   return (
-    <div className={styles.pageContainer}>
+    <div className={styles.homePageContainer}>
       {isMobile && (
         <>
           <BurgerMenu />

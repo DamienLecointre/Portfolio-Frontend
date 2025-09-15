@@ -1,13 +1,9 @@
-import Storytelling from "./Storytelling";
-
-import styles from "@/styles/components/sections/storytelling/StorytellingData.module.scss";
-
 type storytellingContentType = {
   id: number;
   text: string;
 }[];
 
-const storytellingContent: storytellingContentType = [
+const storytellingData: storytellingContentType = [
   {
     id: 1,
     text: "Chaque projet naît d'une idée. Mon rôle est de vous accompagner pour la transformer en un site professionnel et efficace, fidèle à vos besoins.",
@@ -31,13 +27,7 @@ const storytellingContent: storytellingContentType = [
 ];
 
 function StorytellingData() {
-  return (
-    <div className={styles.storytellingContainer}>
-      {storytellingContent.map((sentence) => (
-        <Storytelling key={sentence.id} {...sentence} />
-      ))}
-    </div>
-  );
+  return storytellingData;
 }
 
 export default StorytellingData;

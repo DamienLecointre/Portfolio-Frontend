@@ -1,6 +1,6 @@
 import Baseline from "@/components/sections/baseline/Baseline";
-import ContactsData from "@/components/sections/contacts/ContactsData";
-import DisplayScreensBtnData from "@/components/sections/nav/DisplayScreensBtnData";
+import ContactsDisplay from "@/components/sections/contacts/ContactsDisplay";
+import NavDisplay from "@/components/sections/nav/NavDisplay";
 
 import styles from "@/styles/components/layout/Header.module.scss";
 
@@ -8,9 +8,9 @@ function Header() {
   return (
     <header className={styles.headerContainer}>
       <Baseline />
-      <div className={styles.linksContainer}>
-        <ContactsData location="home" />
-        <DisplayScreensBtnData location="home" />
+      <div>
+        <ContactsDisplay location="home" />
+        <NavDisplay location="home" />
       </div>
     </header>
   );

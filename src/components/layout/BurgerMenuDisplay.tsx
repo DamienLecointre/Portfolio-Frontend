@@ -1,5 +1,5 @@
-import DisplayScreensBtnData from "@/components/sections/nav/DisplayScreensBtnData";
-import ContactsData from "@/components/sections/contacts/ContactsData";
+import NavDisplay from "@/components/sections/nav/NavDisplay";
+import ContactsDisplay from "@/components/sections/contacts/ContactsDisplay";
 
 import { useBurger } from "@/components/utils/BurgerContext";
 
@@ -14,11 +14,11 @@ function BurgerMenuDisplay() {
         isActive ? styles.active : ""
       }`}
     >
-      <DisplayScreensBtnData location="BurgerMenuDisplay" />
+      <NavDisplay location="BurgerMenuDisplay" />
       <div className={styles.lineContainer}>
         <span className={styles.line}></span>
       </div>
-      <ContactsData location="BurgerMenuDisplay" />
+      <ContactsDisplay location="BurgerMenuDisplay" />
     </div>
   );
 }
