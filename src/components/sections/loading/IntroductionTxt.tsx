@@ -2,14 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-import IntroductionTxtData from "@/data/sections/loading/IntroductionTxtData";
+import { sentences } from "@/data/sections/loading/IntroductionTxtData";
 
 import styles from "@/styles/components/sections/loading/IntroductionTxt.module.scss";
 
 function IntroductionTxt() {
   const [currentSentence, setCurrentSentence] = useState(0);
   const [stage, setStage] = useState(0);
-  const sentences = IntroductionTxtData();
 
   useEffect(() => {
     const timeouts: NodeJS.Timeout[] = [];
@@ -35,7 +34,7 @@ function IntroductionTxt() {
     );
 
     return () => timeouts.forEach(clearTimeout);
-  }, [currentSentence, sentences]);
+  }, [currentSentence]);
 
   return (
     <div className={styles.container}>

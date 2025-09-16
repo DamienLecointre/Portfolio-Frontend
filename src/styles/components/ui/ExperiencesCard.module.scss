@@ -1,4 +1,4 @@
-// @import "@/styles/utils/textStyle";
+@import "@/styles/utils/textStyle";
 
 .experiencesCardContainer {
   display: flex;
@@ -10,7 +10,7 @@
 .title,
 .detail,
 .date{
-  @include desktopTitleH5;
+  @extend %experienceSectionText;
 }
 
 .title,

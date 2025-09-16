@@ -1,4 +1,4 @@
-// @import "@/styles/utils/textStyle";
+@import "@/styles/utils/textStyle";
 
 .formationsContainer {
   height: 100%;
@@ -6,7 +6,5 @@
 }
 
 .title {
-  @include desktopTitleH3;
-  letter-spacing: $letterSpacingSmall;
-  padding-bottom: $space24;
+  @extend %experienceSectionTitle;
 }

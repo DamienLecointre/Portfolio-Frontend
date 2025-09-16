@@ -5,13 +5,15 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faMobileScreenButton } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-type contactDataType = {
+// Typage d’un contact
+export type Contact = {
   icon: ReactElement;
   label: string;
   link?: string;
-}[];
+};
 
-const contactData: contactDataType = [
+// Données exportées directement
+export const contactsData: Contact[] = [
   {
     icon: (
       <FontAwesomeIcon
@@ -29,7 +31,7 @@ const contactData: contactDataType = [
         style={{ height: "20px", width: "20px" }}
       />
     ),
-    label: "06 75 28 36 08",
+    label: "+33 6 75 28 36 08",
     link: "tel:+33675283608",
   },
   {
@@ -53,8 +55,3 @@ const contactData: contactDataType = [
     link: "https://github.com/DamienLecointre",
   },
 ];
-function ContactsData() {
-  return contactData;
-}
-
-export default ContactsData;

@@ -6,7 +6,7 @@ type experiencesDataType = {
   endDate: number | string;
 }[];
 
-const experiencesData: experiencesDataType = [
+export const experiencesData: experiencesDataType = [
   {
     id: 1,
     activity: "Développeur web full stack",
@@ -24,9 +24,3 @@ const experiencesData: experiencesDataType = [
     endDate: 2024,
   },
 ];
-
-function ExperiencesData() {
-  return experiencesData;
-}
-
-export default ExperiencesData;

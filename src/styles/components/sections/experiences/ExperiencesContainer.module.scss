@@ -1,12 +1,10 @@
-// @import "@/styles/utils/textStyle";
-
+@import "@/styles/utils/textStyle";
+// 
 .experiencesContainer {
   height: 100%;
   width: 60%;
 }
 
 .title {
-  @include desktopTitleH3;
-  letter-spacing: $letterSpacingSmall;
-  padding-bottom: $space24;
+  @extend %experienceSectionTitle;
 }

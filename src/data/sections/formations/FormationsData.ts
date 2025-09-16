@@ -6,7 +6,7 @@ type formationsDataType = {
   place: string;
 }[];
 
-const formationsData: formationsDataType = [
+export const formationsData: formationsDataType = [
   {
     id: 1,
     endDate: 2025,
@@ -43,9 +43,3 @@ const formationsData: formationsDataType = [
     place: "St NICOLAS Paris 15ème",
   },
 ];
-
-function FormationsData() {
-  return formationsData;
-}
-
-export default FormationsData;

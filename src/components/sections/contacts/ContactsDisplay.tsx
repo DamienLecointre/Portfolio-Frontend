@@ -1,4 +1,4 @@
-import ContactsData from "@/data/sections/contacts/ContactsData";
+import { contactsData } from "@/data/sections/contacts/ContactsData";
 import ContactItem from "@/components/sections/contacts/ContactsItem";
 
 import styles from "@/styles/components/sections/contacts/ContactsDisplay.module.scss";
@@ -8,15 +8,13 @@ type Props = {
 };
 
 function ContactsDisplay({ location }: Props) {
-  const contactData = ContactsData();
-
   return (
     <div
       className={`${location === "home" ? styles.contactsContainer : ""} ${
         location === "BurgerMenuDisplay" ? styles.burgerContactsContainer : ""
       }`}
     >
-      {contactData.map((item, index) => (
+      {contactsData.map((item, index) => (
         <ContactItem key={index} {...item} location={location} />
       ))}
     </div>
