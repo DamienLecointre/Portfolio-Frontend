@@ -49,7 +49,7 @@
   left: 50%;
   opacity: 0;
   z-index: 0;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   @include showElementOpacity1;
 }
 
@@ -63,7 +63,8 @@
 // MEDIA QUERRIES
 // ---------------------------------------------------------
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
+
   .pageContainer,
   .homePageContainer {
     flex-direction: column;
