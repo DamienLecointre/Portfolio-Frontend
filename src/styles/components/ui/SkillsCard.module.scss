@@ -1,0 +1,38 @@
+@import "@/styles/utils/textStyle";
+
+.skillsCardContainer {
+  max-width: 250px;
+  width: 100%;
+}
+
+.titleContainer {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  column-gap: $space16;
+}
+
+.title {
+  @extend %experienceSectionText;
+  color: $color-accent;
+}
+
+.lineContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 16px;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: $accent;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  column-gap: $space16;
+}

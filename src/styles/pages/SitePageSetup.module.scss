@@ -28,7 +28,13 @@
 
 .experiencesContainer {
   display: flex;
+  flex-direction: column;
+  row-gap: $space8;
   overflow-y: auto;
+}
+
+.experiencesWrapper {
+  display: flex;
 }
 
 .gradientContainer {
