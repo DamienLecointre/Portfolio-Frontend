@@ -1,0 +1,59 @@
+// @import "@/styles/utils/textStyle";
+
+.experiencesCardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: $space8 0;
+  row-gap: $space12;
+}
+
+.title,
+.detail,
+.date{
+  @include desktopTitleH5;
+}
+
+.title,
+.date {
+  color: $color-accent;
+}
+
+.datesContainer {
+  display: flex;
+  column-gap: $space12;
+}
+
+.lineContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  padding-bottom: $space8;
+}
+
+.line,
+.dash {
+  height: 1px;
+  width: 100%;
+  background: $accent;
+}
+
+.datesWrapper {
+  display: flex;
+}
+
+.dashContainer {
+  height: 100%;
+  width: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: center;
+  padding-bottom: $space8;
+}
+
+.dash {
+  height: 1px;
+  width: 30%;
+  background: $accent;
+}

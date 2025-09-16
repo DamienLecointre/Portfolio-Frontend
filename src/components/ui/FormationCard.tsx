@@ -1,7 +1,7 @@
 import styles from "@/styles/components/ui/FormationCard.module.scss";
 
 type Props = {
-  endDate: number;
+  endDate: number | null;
   startDate: number | null;
   detail: string;
   place: string;
@@ -19,7 +19,7 @@ function FormationCard({ endDate, startDate, detail, place }: Props) {
       </div>
       <div className={styles.detailsContainer}>
         <h5 className={styles.text}>{detail}</h5>
-        <h5 className={styles.text}>{place}</h5>
+        <h5 className={`${styles.text} ${styles.textThinner}`}>{place}</h5>
       </div>
     </div>
   );

@@ -1,0 +1,9 @@
+%experienceSectionTitle {
+  @include desktopTitleH3;
+  letter-spacing: $letterSpacingSmall;
+  padding-bottom: $space24;
+}
+
+%experienceSectionText {
+  @include desktopTitleH5;
+}

@@ -26,6 +26,11 @@
   overflow-y: hidden;
 }
 
+.experiencesContainer {
+  display: flex;
+  overflow-y: auto;
+}
+
 .gradientContainer {
   position: absolute;
   height: 15%;

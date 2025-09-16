@@ -1,6 +1,6 @@
 type formationsDataType = {
   id: number;
-  endDate: number;
+  endDate: number | null;
   startDate: number | null;
   detail: string;
   place: string;

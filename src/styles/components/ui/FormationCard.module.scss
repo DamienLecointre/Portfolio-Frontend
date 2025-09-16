@@ -17,6 +17,7 @@
 .startDate,
 .endDate {
   @include desktopTitleH5;
+  text-wrap: nowrap;
 }
 
 .endDate {
@@ -46,4 +47,8 @@
 
 .detailsContainer {
   padding: $space8 0;
+}
+
+.textThinner {
+  font-weight: $fontWeightLight300;
 }
