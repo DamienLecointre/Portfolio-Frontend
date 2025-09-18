@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import useCurrentPage from "@/hooks/useCurrentPage";
-import { useBurger } from "../utils/BurgerContext";
+
+import { useBurger } from "@/components/utils/BurgerContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-import styles from "@/styles/components/ui/DisplayScreensBtn.module.scss";
+import styles from "@/styles/components/ui/buttons/DisplayScreensBtn.module.scss";
 
 type linkProps = {
   linkTitle: string;

@@ -2,9 +2,9 @@
 
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-import BurgerMenu from "@/components/ui/BurgerMenu";
+import BurgerMenu from "@/components/ui/buttons/BurgerMenu";
 import BurgerMenuDisplay from "@/components/layout/BurgerMenuDisplay";
-import PageTitle from "@/components/ui/PageTitle";
+import PageTitle from "@/components/ui/molecules/PageTitle";
 import Header from "@/components/layout/Header";
 
 import styles from "@/styles/pages/SitePageSetup.module.scss";

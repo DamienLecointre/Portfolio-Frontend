@@ -1,5 +1,5 @@
 .storytellingContainer {
-  width: 60%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -17,18 +17,19 @@
   }
 }
 
-.storytellingContainer::-webkit-scrollbar {
-  width: 5px;
-}
+// .storytellingContainer::-webkit-scrollbar {
+//   display: none;
+//   // width: 5px;
+// }
 
-.storytellingContainer::-webkit-scrollbar-track {
-  margin-right: 150px;
-}
+// .storytellingContainer::-webkit-scrollbar-track {
+//   margin-right: 150px;
+// }
 
-.storytellingContainer::-webkit-scrollbar-thumb {
-  background: $accent;
-  border-radius: 150px;
-}
+// .storytellingContainer::-webkit-scrollbar-thumb {
+//   background: $accent;
+//   border-radius: 150px;
+// }
 
 // ---------------------------------------------------------
 // MEDIA QUERRIES

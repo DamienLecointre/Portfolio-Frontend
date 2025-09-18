@@ -1,4 +1,4 @@
-import styles from "@/styles/components/ui/LineDivider.module.scss";
+import styles from "@/styles/components/ui/elements/LineDivider.module.scss";
 
 type Props = {
   lineDivider?: string;

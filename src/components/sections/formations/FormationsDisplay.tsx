@@ -1,4 +1,4 @@
-import FormationCard from "@/components/ui/FormationCard";
+import FormationCard from "@/components/ui/cards/FormationCard";
 import { formationsData } from "@/data/sections/formations/FormationsData";
 
 function FormationsDisplay() {

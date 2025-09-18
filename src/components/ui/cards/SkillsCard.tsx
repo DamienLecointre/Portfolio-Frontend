@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import styles from "@/styles/components/ui/SkillsCard.module.scss";
+import styles from "@/styles/components/ui/cards/SkillsCard.module.scss";
 
 type Props = {
   title: string;

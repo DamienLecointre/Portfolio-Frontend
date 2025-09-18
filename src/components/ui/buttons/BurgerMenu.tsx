@@ -2,7 +2,7 @@
 
 import { useBurger } from "@/components/utils/BurgerContext";
 
-import styles from "@/styles/components/ui/BurgerMenu.module.scss";
+import styles from "@/styles/components/ui/buttons/BurgerMenu.module.scss";
 
 function BurgerMenu() {
   const { isActive, toggleMenu } = useBurger();

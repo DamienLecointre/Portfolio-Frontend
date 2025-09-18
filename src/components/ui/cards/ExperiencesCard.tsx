@@ -1,4 +1,4 @@
-import styles from "@/styles/components/ui/ExperiencesCard.module.scss";
+import styles from "@/styles/components/ui/cards/ExperiencesCard.module.scss";
 
 type Props = {
   activity: string;

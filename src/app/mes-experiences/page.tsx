@@ -2,10 +2,10 @@
 
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-import BurgerMenu from "@/components/ui/BurgerMenu";
+import BurgerMenu from "@/components/ui/buttons/BurgerMenu";
 import BurgerMenuDisplay from "@/components/layout/BurgerMenuDisplay";
-import PageTitle from "@/components/ui/PageTitle";
-import LineDivider from "@/components/ui/LineDivider";
+import PageTitle from "@/components/ui/molecules/PageTitle";
+import LineDivider from "@/components/ui/elements/LineDivider";
 import FormationsContainer from "@/components/sections/formations/FormationsContainer";
 import ExperiencesContainer from "@/components/sections/experiences/ExperiencesContainer";
 import SkillsContainer from "@/components/sections/skills/SkillsContainer";

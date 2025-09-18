@@ -1,0 +1,9 @@
+.gradientContainer {
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgb(10, 10, 10, 0.9) 100%);
+  bottom: -2%;
+  left: 0;
+  z-index: 10;
+}

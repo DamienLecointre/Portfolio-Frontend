@@ -1,4 +1,4 @@
-import styles from "@/styles/components/ui/FormationCard.module.scss";
+import styles from "@/styles/components/ui/cards/FormationCard.module.scss";
 
 type Props = {
   endDate: number | null;

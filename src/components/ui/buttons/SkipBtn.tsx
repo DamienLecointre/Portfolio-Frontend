@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { useNavTo } from "@/hooks/useNavTo";
 
-import styles from "@/styles/components/ui/SkipBtn.module.scss";
+import styles from "@/styles/components/ui/buttons/SkipBtn.module.scss";
 
 function SkipBtn() {
   const navTo = useNavTo();

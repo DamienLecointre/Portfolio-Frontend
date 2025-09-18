@@ -1,4 +1,4 @@
-import styles from "@/styles/components/ui/PageTitle.module.scss";
+import styles from "@/styles/components/ui/molecules/PageTitle.module.scss";
 
 type PageTitleProps = {
   dynamicTitle: string;
