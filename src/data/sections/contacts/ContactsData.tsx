@@ -7,6 +7,7 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // Typage d’un contact
 export type Contact = {
+  id: number;
   icon: ReactElement;
   label: string;
   link?: string;
@@ -15,6 +16,7 @@ export type Contact = {
 // Données exportées directement
 export const contactsData: Contact[] = [
   {
+    id: 1,
     icon: (
       <FontAwesomeIcon
         icon={faEnvelope}
@@ -25,6 +27,7 @@ export const contactsData: Contact[] = [
     link: "mailto:lecointe.d@gmail.com",
   },
   {
+    id: 2,
     icon: (
       <FontAwesomeIcon
         icon={faMobileScreenButton}
@@ -35,6 +38,7 @@ export const contactsData: Contact[] = [
     link: "tel:+33675283608",
   },
   {
+    id: 3,
     icon: (
       <FontAwesomeIcon
         icon={faLinkedinIn}
@@ -45,6 +49,7 @@ export const contactsData: Contact[] = [
     link: "https://www.linkedin.com/in/damienlecointre-developpeurweb/",
   },
   {
+    id: 4,
     icon: (
       <FontAwesomeIcon
         icon={faGithub}

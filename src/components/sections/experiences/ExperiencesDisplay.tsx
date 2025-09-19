@@ -4,8 +4,8 @@ import ExperiencesCard from "@/components/ui/cards/ExperiencesCard";
 function ExperiencesDisplay() {
   return (
     <>
-      {experiencesData.map((item, index) => (
-        <ExperiencesCard key={index} {...item} />
+      {experiencesData.map((item) => (
+        <ExperiencesCard key={item.id} {...item} />
       ))}
     </>
   );

@@ -6,8 +6,10 @@
   border-radius: 150px;
   padding: $btnSpace12 $btnSpace16;
   cursor: pointer;
+  transition: $mediumTransition;
 }
 
 .active {
   background: $accent;
+  transition: $mediumTransition;
 }

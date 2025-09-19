@@ -4,18 +4,19 @@ import ContactItem from "@/components/sections/contacts/ContactsItem";
 import styles from "@/styles/components/sections/contacts/ContactsDisplay.module.scss";
 
 type Props = {
+  id: number;
   location?: string;
 };
 
-function ContactsDisplay({ location }: Props) {
+function ContactsDisplay({ id, location }: Props) {
   return (
     <div
       className={`${location === "home" ? styles.contactsContainer : ""} ${
         location === "BurgerMenuDisplay" ? styles.burgerContactsContainer : ""
       }`}
     >
-      {contactsData.map((item, index) => (
-        <ContactItem key={index} {...item} location={location} />
+      {contactsData.map((item) => (
+        <ContactItem key={item.id} {...item} location={location} />
       ))}
     </div>
   );

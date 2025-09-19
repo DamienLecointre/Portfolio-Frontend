@@ -6,8 +6,8 @@ import styles from "@/styles/components/sections/skills/SkillsDisplay.module.scs
 function SkillsDisplay() {
   return (
     <div className={styles.skillsDisplayContainer}>
-      {SkillsData.map((item, index) => (
-        <SkillsCard key={index} {...item} />
+      {SkillsData.map((item) => (
+        <SkillsCard key={item.id} {...item} />
       ))}
     </div>
   );

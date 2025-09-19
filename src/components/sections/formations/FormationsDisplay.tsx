@@ -4,8 +4,8 @@ import { formationsData } from "@/data/sections/formations/FormationsData";
 function FormationsDisplay() {
   return (
     <>
-      {formationsData.map((item, index) => (
-        <FormationCard key={index} {...item} />
+      {formationsData.map((item) => (
+        <FormationCard key={item.id} {...item} />
       ))}
     </>
   );
