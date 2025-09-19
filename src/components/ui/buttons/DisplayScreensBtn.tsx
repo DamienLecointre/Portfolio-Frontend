@@ -38,8 +38,6 @@ function DisplayScreensBtn({ linkTitle, link, location }: linkProps) {
         router.push(link);
       }
     }, 400);
-
-    console.log(linkTitle);
   };
 
   return (

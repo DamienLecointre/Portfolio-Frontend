@@ -1,4 +1,4 @@
-import DataScreensDisplayBtn from "@/data/sections/nav/DataScreensDisplayBtn";
+import DataScreensDisplayBtn from "@/data/ui/buttons/DataScreensDisplayBtn";
 import DisplayScreensBtn from "@/components/ui/buttons/DisplayScreensBtn";
 
 import styles from "@/styles/components/sections/nav/NavDisplay.module.scss";

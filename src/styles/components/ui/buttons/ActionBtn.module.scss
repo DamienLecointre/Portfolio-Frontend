@@ -1,0 +1,13 @@
+.button {
+  @include desktopTitleH5;
+  color: $white;
+  letter-spacing: $letterSpacingSmall;
+  background: none;
+  border-radius: 150px;
+  padding: $btnSpace12 $btnSpace16;
+  cursor: pointer;
+}
+
+.active {
+  background: $accent;
+}

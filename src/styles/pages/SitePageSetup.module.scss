@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.lineTopDividerContainer {
+  position: relative;
+}
+
 .txtContainer {
   position: relative;
   @include fullParentSize;
@@ -36,16 +40,6 @@
 .experiencesWrapper {
   display: flex;
 }
-
-// .gradientContainer {
-//   position: absolute;
-//   height: 15%;
-//   width: 100%;
-//   background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgb(10, 10, 10, 0.9) 100%);
-//   bottom: 0;
-//   left: 0;
-//   z-index: 10;
-// }
 
 .quoteIcon {
   position: absolute;

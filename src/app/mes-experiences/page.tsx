@@ -6,9 +6,8 @@ import BurgerMenu from "@/components/ui/buttons/BurgerMenu";
 import BurgerMenuDisplay from "@/components/layout/BurgerMenuDisplay";
 import PageTitle from "@/components/ui/molecules/PageTitle";
 import LineDivider from "@/components/ui/elements/LineDivider";
-import FormationsContainer from "@/components/sections/formations/FormationsContainer";
-import ExperiencesContainer from "@/components/sections/experiences/ExperiencesContainer";
-import SkillsContainer from "@/components/sections/skills/SkillsContainer";
+import ActionBtnContainer from "@/components/ui/molecules/ActionBtnContainer";
+import ExperiencesDisplay from "@/components/sections/experiences/ExperiencesDisplay";
 import Header from "@/components/layout/Header";
 
 import styles from "@/styles/pages/SitePageSetup.module.scss";
@@ -26,14 +25,11 @@ function ExperiencePage() {
       )}
       <div className={styles.contentContainer}>
         <PageTitle dynamicTitle="Mes expériences" />
-        <LineDivider lineDivider="lineTopDivider" />
-        <div className={styles.experiencesContainer}>
-          <div className={styles.experiencesWrapper}>
-            <FormationsContainer />
-            <ExperiencesContainer />
-          </div>
-          <SkillsContainer />
+        <div className={styles.lineTopDividerContainer}>
+          <LineDivider lineDivider="lineTopDivider" />
+          <ActionBtnContainer />
         </div>
+        <ExperiencesDisplay />
         <LineDivider />
       </div>
       {!isMobile && <Header />}

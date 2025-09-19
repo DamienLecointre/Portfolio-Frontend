@@ -1,16 +1,16 @@
 import styles from "@/styles/components/ui/cards/ExperiencesCard.module.scss";
 
 type Props = {
-  activity: string;
+  title: string;
   detail: string;
   startDate: number | string;
   endDate: number | string;
 };
 
-function ExperiencesCard({ activity, detail, startDate, endDate }: Props) {
+function ExperiencesCard({ title, detail, startDate, endDate }: Props) {
   return (
     <div className={styles.experiencesCardContainer}>
-      <h5 className={styles.title}>{activity}</h5>
+      <h5 className={styles.title}>{title}</h5>
       <p className={styles.detail}>{detail}</p>
       <div className={styles.datesContainer}>
         <div className={styles.lineContainer}>

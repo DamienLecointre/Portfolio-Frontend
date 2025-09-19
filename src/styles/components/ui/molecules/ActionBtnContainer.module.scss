@@ -1,0 +1,19 @@
+.btnContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btnWrapper {
+  min-width: 550px;
+  display: flex;
+  justify-content: space-between;
+  background: $black;
+  border: 1px solid $accent;
+  border-radius: 150px;
+  padding: $space4;
+}
