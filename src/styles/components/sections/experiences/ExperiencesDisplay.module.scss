@@ -2,12 +2,5 @@
   height: 100%;
   display: flex;
   align-items: center;
-  opacity: 1;
   column-gap: $space56;
-  transition: $mediumTransition;
-}
-
-.hiddenContainer {
-  opacity: 0;
-  transition: $mediumTransition;
 }
