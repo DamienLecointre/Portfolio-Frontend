@@ -1,14 +1,15 @@
 import ActionBtn from "../buttons/ActionBtn";
 
-import { useState } from "react";
-
 import { DataActionBtn } from "@/data/ui/buttons/DataActionBtn";
 
 import styles from "@/styles/components/ui/molecules/ActionBtnContainer.module.scss";
 
-function ActionBtnContainer() {
-  const [activeId, setActiveId] = useState(1);
+type Props = {
+  activeId: number;
+  setActiveId: (id: number) => void;
+};
 
+function ActionBtnContainer({ activeId, setActiveId }: Props) {
   const handleclick = (id: number) => {
     setActiveId(id);
   };

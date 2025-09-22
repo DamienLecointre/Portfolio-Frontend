@@ -4,11 +4,10 @@ import ContactItem from "@/components/sections/contacts/ContactsItem";
 import styles from "@/styles/components/sections/contacts/ContactsDisplay.module.scss";
 
 type Props = {
-  id: number;
   location?: string;
 };
 
-function ContactsDisplay({ id, location }: Props) {
+function ContactsDisplay({ location }: Props) {
   return (
     <div
       className={`${location === "home" ? styles.contactsContainer : ""} ${

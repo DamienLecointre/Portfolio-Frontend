@@ -1,13 +1,24 @@
 @import "@/styles/utils/textStyle";
 
 .experiencesCardContainer {
+  height: 100%;
+  width: 100%;
+  max-height: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.titleContainer {
   display: flex;
   flex-direction: column;
-  padding: $space8 0;
   row-gap: $space12;
 }
 
-.title,
+.title {
+  @include desktopParagraphXl;
+}
+
 .detail,
 .date{
   @extend %experienceSectionText;

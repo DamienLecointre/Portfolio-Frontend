@@ -10,8 +10,10 @@ type Props = {
 function ExperiencesCard({ title, detail, startDate, endDate }: Props) {
   return (
     <div className={styles.experiencesCardContainer}>
-      <h5 className={styles.title}>{title}</h5>
-      <p className={styles.detail}>{detail}</p>
+      <div className={styles.titleContainer}>
+        <h5 className={styles.title}>{title}</h5>
+        <p className={styles.detail}>{detail}</p>
+      </div>
       <div className={styles.datesContainer}>
         <div className={styles.lineContainer}>
           <div className={styles.line}></div>

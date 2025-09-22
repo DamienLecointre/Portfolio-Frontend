@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 import BurgerMenu from "@/components/ui/buttons/BurgerMenu";
@@ -15,6 +17,8 @@ import styles from "@/styles/pages/SitePageSetup.module.scss";
 function ExperiencePage() {
   const isMobile = useIsMobile(768);
 
+  const [activeId, setActiveId] = useState(1);
+
   return (
     <div className={styles.pageContainer}>
       {isMobile && (
@@ -27,9 +31,9 @@ function ExperiencePage() {
         <PageTitle dynamicTitle="Mes expériences" />
         <div className={styles.lineTopDividerContainer}>
           <LineDivider lineDivider="lineTopDivider" />
-          <ActionBtnContainer />
+          <ActionBtnContainer activeId={activeId} setActiveId={setActiveId} />
         </div>
-        <ExperiencesDisplay />
+        {activeId === 1 ? <ExperiencesDisplay isActive={activeId} /> : ""}
         <LineDivider />
       </div>
       {!isMobile && <Header />}
