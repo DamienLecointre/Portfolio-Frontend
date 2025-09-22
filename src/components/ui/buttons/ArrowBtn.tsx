@@ -30,7 +30,7 @@ function ArrowBtn({
           icon={faChevronLeft}
           className={`${styles.arrow} ${
             disableLeft ? styles.arrowDisabled : ""
-          }`}
+          } ${!disableLeft ? styles.arrowBtnPointer : ""}`}
         />
       </button>
       <button
@@ -42,7 +42,7 @@ function ArrowBtn({
           icon={faChevronRight}
           className={`${styles.arrow} ${
             disableRight ? styles.arrowDisabled : ""
-          }`}
+          } ${!disableRight ? styles.arrowBtnPointer : ""}`}
         />
       </button>
     </div>

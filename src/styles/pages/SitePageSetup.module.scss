@@ -18,6 +18,12 @@
   flex-direction: column;
   justify-content: space-between;
   overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.contentContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .lineDividerContainer {

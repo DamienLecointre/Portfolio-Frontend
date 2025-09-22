@@ -73,14 +73,24 @@ function ExperiencePage() {
             </motion.div>
           )}
         </AnimatePresence>
-        {showArrows && (
-          <ArrowBtn
-            onLeftClick={() => scroll("left")}
-            onRightClick={() => scroll("right")}
-            disableLeft={!canScrollLeft}
-            disableRight={!canScrollRight}
-          />
-        )}
+        <AnimatePresence>
+          {showArrows && activeId === 2 && (
+            <motion.div
+              key="arrows"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+            >
+              <ArrowBtn
+                onLeftClick={() => scroll("left")}
+                onRightClick={() => scroll("right")}
+                disableLeft={!canScrollLeft}
+                disableRight={!canScrollRight}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
         <LineDivider />
       </div>
 
