@@ -7,11 +7,11 @@ type Props = {
 function LineDivider({ lineDivider }: Props) {
   return (
     <div
-      className={
+      className={`${
         lineDivider === "lineTopDivider"
           ? styles.lineTopContainer
           : styles.lineContainer
-      }
+      } ${lineDivider === "formations" ? styles.lineDividerFormations : ""}`}
     >
       <div className={styles.line}></div>
     </div>

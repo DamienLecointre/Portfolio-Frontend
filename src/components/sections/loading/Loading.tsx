@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { useNavTo } from "@/hooks/useNavTo";
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 import LoadingTxt from "@/components/sections/loading/LoadingTxt";
 import IntroductionTxt from "@/components/sections/loading/IntroductionTxt";
@@ -24,7 +24,7 @@ function Loading() {
   type IntroGridValue = [number, number];
 
   const navTo = useNavTo();
-  const isMobile = useIsMobile(768);
+  const isMobile = useBreakpoint(768);
 
   const [gridValue, setGridValue] = useState<IntroGridValue>(steps[0]);
   const [finished, setFinished] = useState(false);

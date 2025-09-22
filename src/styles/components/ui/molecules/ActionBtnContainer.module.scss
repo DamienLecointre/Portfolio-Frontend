@@ -5,7 +5,21 @@
   justify-content: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.8);
+  @include showElementScale1Opacity1;
+}
+
+@keyframes quickShowElementOpacity1 {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showElementScale1 {
+  to {
+    transform: translate(-50%, -50%) scale(1)
+  }
 }
 
 .btnWrapper {

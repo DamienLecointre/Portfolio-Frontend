@@ -1,6 +1,6 @@
 "use client";
 
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 import BurgerMenu from "@/components/ui/buttons/BurgerMenu";
 import BurgerMenuDisplay from "@/components/layout/BurgerMenuDisplay";
@@ -10,7 +10,7 @@ import Header from "@/components/layout/Header";
 import styles from "@/styles/pages/SitePageSetup.module.scss";
 
 function HomePage() {
-  const isMobile = useIsMobile(768);
+  const isMobile = useBreakpoint(768);
 
   return (
     <div className={styles.homePageContainer}>

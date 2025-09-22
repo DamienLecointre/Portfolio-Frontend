@@ -12,13 +12,15 @@
 }
 
 .contentContainer {
+  position: relative;
   @include fullParentSize;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: hidden;
 }
 
-.lineTopDividerContainer {
+.lineDividerContainer {
   position: relative;
 }
 
@@ -49,7 +51,7 @@
 }
 
 .motionContainer {
-  height: 100%;
+  flex: 1;
 }
 
 // ---------------------------------------------------------

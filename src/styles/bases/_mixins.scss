@@ -29,9 +29,21 @@
   animation: showElementOpacity1 3s ease-in-out forwards ;
 }
 
-@mixin hiddenElementOpacity0 {
-  animation: hiddenElementOpacity0 1s ease-in-out forwards ;
+@mixin quickShowElementOpacity1 {
+  animation: quickShowElementOpacity1 1s ease-in-out forwards ;
 }
+
+@mixin showElementScale1 {
+  animation: showElementScale1 2.5s ease-in-out forwards;
+}
+
+@mixin showElementScale1Opacity1 {
+  animation: quickShowElementOpacity1 1s ease-in-out forwards,  showElementScale1 2.5s ease-in-out forwards;
+}
+
+// @mixin hiddenElementOpacity0 {
+//   animation: hiddenElementOpacity0 1s ease-in-out forwards ;
+// }
 
 @mixin showOrangeLine {
   animation: showOrangeLine 2s ease-in-out forwards;

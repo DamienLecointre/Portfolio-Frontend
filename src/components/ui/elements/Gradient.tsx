@@ -1,11 +1,11 @@
 import { useIsShortScreen } from "@/hooks/useIsShortScreen";
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 import styles from "@/styles/components/ui/molecules/Gradient.module.scss";
 
 function Gradient() {
   const isShortScreen = useIsShortScreen(810);
-  const isMobile = useIsMobile(768);
+  const isMobile = useBreakpoint(768);
 
   const gradientheightStyle = { height: "40%" };
 
