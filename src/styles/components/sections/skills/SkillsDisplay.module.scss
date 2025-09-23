@@ -1,6 +1,14 @@
-.skillsDisplayContainer {
+.skillsWrapper {
+  height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-left: $space48;
+  @include centerChildren;
+  overflow: hidden;
+}
+
+.skillsDisplayContainer {
+  flex-wrap: nowrap;
+  column-gap: $space32;
+  padding: 0 $space48;
+  width: max-content;
+  box-sizing: content-box;
 }

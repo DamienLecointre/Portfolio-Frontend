@@ -13,6 +13,7 @@ import LineDivider from "@/components/ui/elements/LineDivider";
 import ActionBtnContainer from "@/components/ui/molecules/ActionBtnContainer";
 import ExperiencesDisplay from "@/components/sections/experiences/ExperiencesDisplay";
 import FormationsDisplay from "@/components/sections/formations/FormationsDisplay";
+import SkillsDisplay from "@/components/sections/skills/SkillsDisplay";
 import ArrowBtn from "@/components/ui/buttons/ArrowBtn";
 import Header from "@/components/layout/Header";
 
@@ -22,7 +23,8 @@ import styles from "@/styles/pages/SitePageSetup.module.scss";
 
 function ExperiencePage() {
   const isMobile = useBreakpoint(768);
-  const showArrows = useBreakpoint(1900);
+  const showArrowsFormation = useBreakpoint(1900);
+  const showArrowsSkills = useBreakpoint(1250);
 
   const [activeId, setActiveId] = useState(1);
 
@@ -106,10 +108,30 @@ function ExperiencePage() {
               />
             </motion.div>
           )}
+          {activeId === 3 && (
+            <motion.div
+              className={styles.motionContainer}
+              key="skills"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <SkillsDisplay
+                wrapperRef={wrapperRef}
+                trackRef={trackRef}
+                transform={transform}
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+              />
+            </motion.div>
+          )}
         </AnimatePresence>
 
         <AnimatePresence>
-          {showArrows && activeId === 2 && (
+          {((showArrowsFormation && activeId === 2) ||
+            (showArrowsSkills && activeId === 3)) && (
             <motion.div
               key="arrows"
               initial={{ opacity: 0 }}

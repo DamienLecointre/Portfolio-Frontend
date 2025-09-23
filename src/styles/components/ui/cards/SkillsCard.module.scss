@@ -1,34 +1,27 @@
-@import "@/styles/utils/textStyle";
-
 .skillsCardContainer {
-  max-width: 250px;
-  width: 100%;
+  position: relative;
+  height: 160px;
+  width: 260px;
+  @include centerChildren;
+  border: 1px solid $accent;
+  border-radius: 12px;
+  padding: $space24;
 }
 
 .titleContainer {
-  height: 50%;
-  width: 100%;
+  position: absolute;
   display: flex;
-  column-gap: $space16;
+  align-items: center;
+  background: $black;
+  top: 0;
+  left: 0;
+  transform: translate(16px, -50%);
+  padding: 0 4px
 }
 
 .title {
-  @extend %experienceSectionText;
+  @include desktopTitleH1S;
   color: $color-accent;
-}
-
-.lineContainer {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 16px;
-}
-
-.line {
-  height: 1px;
-  width: 100%;
-  background: $accent;
 }
 
 .iconContainer {
