@@ -7,6 +7,10 @@
   padding: $btnSpace12 $btnSpace16;
   cursor: pointer;
   transition: $mediumTransition;
+
+  &:not(.active):hover {
+    background: rgba(255, 112, 40, 0.3);
+  }
 }
 
 .active {

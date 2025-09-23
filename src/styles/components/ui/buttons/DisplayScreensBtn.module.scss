@@ -15,7 +15,7 @@
     transition: $mediumTransition;
   }
 
-  &:hover::after {
+  &:not(.activeLink):hover::after{
     width: 100%;
   }
 }
@@ -27,6 +27,7 @@
 .activeLink {
   color: $color-accent;
   font-weight: 600;
+  cursor: default;
 }
 
 // ---------------------------------------------------------
