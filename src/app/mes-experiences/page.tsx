@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 import { useBreakpoint } from "@/hooks/useBreakpoint";
-import { useHorizontalScroll } from "@/hooks/useHorizontalScroll";
+import { useCarousel } from "@/hooks/useCarousel";
+// import { useHorizontalScroll } from "@/hooks/useHorizontalScroll";
 
 import BurgerMenu from "@/components/ui/buttons/BurgerMenu";
 import BurgerMenuDisplay from "@/components/layout/BurgerMenuDisplay";
@@ -25,9 +26,35 @@ function ExperiencePage() {
 
   const [activeId, setActiveId] = useState(1);
 
-  const formationsRef = useRef<HTMLDivElement>(null);
-  const { scroll, canScrollLeft, canScrollRight } =
-    useHorizontalScroll(formationsRef);
+  const {
+    wrapperRef,
+    trackRef,
+    transform,
+    next,
+    prev,
+    measure,
+    isStart,
+    isEnd,
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd,
+  } = useCarousel();
+
+  useEffect(() => {
+    if (activeId !== 2) return;
+    const raf = requestAnimationFrame(() => {
+      requestAnimationFrame(() => measure());
+    });
+    window.addEventListener("resize", measure);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", measure);
+    };
+  }, [activeId, measure]);
+
+  // const formationsRef = useRef<HTMLDivElement>(null);
+  // const { scroll, canScrollLeft, canScrollRight } =
+  //   useHorizontalScroll(formationsRef);
 
   return (
     <div className={styles.pageContainer}>
@@ -69,10 +96,18 @@ function ExperiencePage() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              <FormationsDisplay containerRef={formationsRef} />
+              <FormationsDisplay
+                wrapperRef={wrapperRef}
+                trackRef={trackRef}
+                transform={transform}
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+              />
             </motion.div>
           )}
         </AnimatePresence>
+
         <AnimatePresence>
           {showArrows && activeId === 2 && (
             <motion.div
@@ -83,10 +118,10 @@ function ExperiencePage() {
               transition={{ duration: 1.2, ease: "easeInOut" }}
             >
               <ArrowBtn
-                onLeftClick={() => scroll("left")}
-                onRightClick={() => scroll("right")}
-                disableLeft={!canScrollLeft}
-                disableRight={!canScrollRight}
+                onLeftClick={prev}
+                onRightClick={next}
+                isStart={isStart}
+                isEnd={isEnd}
               />
             </motion.div>
           )}

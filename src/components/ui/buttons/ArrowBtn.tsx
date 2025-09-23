@@ -9,40 +9,35 @@ import styles from "@/styles/components/ui/buttons/ArrowBtn.module.scss";
 type Props = {
   onLeftClick: () => void;
   onRightClick: () => void;
-  disableLeft?: boolean;
-  disableRight?: boolean;
+  isStart: boolean;
+  isEnd: boolean;
 };
 
-function ArrowBtn({
-  onLeftClick,
-  onRightClick,
-  disableLeft,
-  disableRight,
-}: Props) {
+function ArrowBtn({ onLeftClick, onRightClick, isStart, isEnd }: Props) {
   return (
     <div className={styles.arrowBtnContainer}>
       <button
         className={styles.arrowBtn}
         onClick={onLeftClick}
-        disabled={disableLeft}
+        disabled={isStart}
       >
         <FontAwesomeIcon
           icon={faChevronLeft}
-          className={`${styles.arrow} ${
-            disableLeft ? styles.arrowDisabled : ""
-          } ${!disableLeft ? styles.arrowBtnPointer : ""}`}
+          className={`${styles.arrow} ${isStart ? styles.arrowDisabled : ""} ${
+            !isStart ? styles.arrowBtnPointer : ""
+          }`}
         />
       </button>
       <button
         className={styles.arrowBtn}
         onClick={onRightClick}
-        disabled={disableRight}
+        disabled={isEnd}
       >
         <FontAwesomeIcon
           icon={faChevronRight}
-          className={`${styles.arrow} ${
-            disableRight ? styles.arrowDisabled : ""
-          } ${!disableRight ? styles.arrowBtnPointer : ""}`}
+          className={`${styles.arrow} ${isEnd ? styles.arrowDisabled : ""} ${
+            !isEnd ? styles.arrowBtnPointer : ""
+          }`}
         />
       </button>
     </div>
