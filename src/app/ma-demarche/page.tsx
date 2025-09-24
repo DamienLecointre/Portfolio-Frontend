@@ -28,7 +28,7 @@ function HistoirePage() {
         </>
       )}
       <div className={styles.contentContainer}>
-        <PageTitle dynamicTitle="Mon histoire" />
+        <PageTitle dynamicTitle="Ma démarche" />
         <LineDivider lineDivider="lineTopDivider" />
         <div className={styles.txtContainer}>
           {isShortScreen && <Gradient />}

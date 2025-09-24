@@ -31,3 +31,14 @@
   border-radius: 150px;
   padding: $space4;
 }
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 950px) {
+  .btnWrapper {
+    min-width: fit-content;
+    column-gap: 8px;
+  }
+}

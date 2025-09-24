@@ -35,13 +35,15 @@
 // MEDIA QUERRIES
 // ---------------------------------------------------------
 
-@media (max-width: 1050px) {
+// @media (max-width: 1050px) {
 
-  .lineTopContainer {
-    padding: 40px 0 24px;
-  }
+//   .lineTopContainer {
+//     padding: 40px 0;
+//     // padding: 40px 0 24px;
+//   }
 
-  .lineContainer {
-    padding: $space24 0;
-  }
-}
+//   .lineContainer {
+//     padding-top: 40px;
+//     // padding-top: $space24 ;
+//   }
+// }

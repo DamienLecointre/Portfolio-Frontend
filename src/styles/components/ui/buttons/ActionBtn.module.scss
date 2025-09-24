@@ -17,3 +17,20 @@
   background: $accent;
   transition: $mediumTransition;
 }
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 950px)  {
+  .button {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 0.75rem;
+  }
+}

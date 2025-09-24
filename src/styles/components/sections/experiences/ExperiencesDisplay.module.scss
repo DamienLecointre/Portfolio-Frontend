@@ -4,3 +4,10 @@
   align-items: center;
   column-gap: $space56;
 }
+
+@media (max-width: 950px) {
+  .experiencesContainer {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}

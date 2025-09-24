@@ -68,3 +68,20 @@
   width: 30%;
   background: $accent;
 }
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// --------------------------------------------------------- 
+
+@media (max-width: 1300px) {
+
+  .experiencesCardContainer {
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 950px) {
+  .experiencesCardContainer {
+    max-height: 200px;
+  }
+}
