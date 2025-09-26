@@ -11,3 +11,14 @@
     row-gap: 32px;
   }
 }
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 768px) {
+  .experiencesContainer {
+    height: fit-content;
+    padding-bottom: 32px;
+  }
+}

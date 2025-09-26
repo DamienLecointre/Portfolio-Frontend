@@ -18,7 +18,7 @@
   background: $black;
   top: 0;
   transform: translate(-4px, -50%);
-  padding: 0 4px
+  padding: 0 4px;
 }
 
 .dates {
@@ -26,7 +26,7 @@
 }
 
 .startDate {
-  padding-left: $space8
+  padding-left: $space8;
 }
 
 .endDate {
@@ -47,4 +47,21 @@
 
 .textThinner {
   font-weight: $fontWeightLight300;
+}
+
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
+
+@media (max-width: 950px) {
+  .formationCardContainer {
+    width: 100%;
+  }
+
+  .detailsContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

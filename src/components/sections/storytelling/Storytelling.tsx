@@ -13,7 +13,7 @@ function Storytelling({ text }: Props) {
           href="mailto:lecointe.d@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.textLink}
+          className={`${styles.text} ${styles.textLink}`}
         >
           Parlons-en
         </a>

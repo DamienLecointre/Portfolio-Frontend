@@ -11,7 +11,7 @@ export const experiencesData: experiencesDataType = [
     id: 1,
     title: "Développeur web full stack",
     detail:
-      "Aujourd'hui, je transpose ces compétences dans le numérique. Mon objectif reste le même : transformer chaque idée en une solution claire, moderne et prête à l'emploi, en accompagnant mes clients de la conception jusqu'au produit final.",
+      "Enrichi de mon expérience passée, je transpose, aujourd'hui, mes compétences dans le numérique. Mon objectif reste le même : transformer chaque idée en une solution claire, moderne et prête à l'emploi, en accompagnant mes clients de la conception jusqu'au produit final.",
     startDate: 2024,
     endDate: "now",
   },

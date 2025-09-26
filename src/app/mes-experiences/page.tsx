@@ -14,6 +14,7 @@ import ActionBtnContainer from "@/components/ui/molecules/ActionBtnContainer";
 import ExperiencesDisplay from "@/components/sections/experiences/ExperiencesDisplay";
 import FormationsDisplay from "@/components/sections/formations/FormationsDisplay";
 import SkillsDisplay from "@/components/sections/skills/SkillsDisplay";
+import Gradient from "@/components/ui/elements/Gradient";
 import ArrowBtn from "@/components/ui/buttons/ArrowBtn";
 import Header from "@/components/layout/Header";
 
@@ -24,6 +25,7 @@ import styles from "@/styles/pages/SitePageSetup.module.scss";
 function ExperiencePage() {
   const isMobile = useBreakpoint(768);
   const showArrowsFormation = useBreakpoint(1900);
+  const hideElement = useBreakpoint(950);
   const showArrowsSkills = useBreakpoint(1250);
 
   const [activeId, setActiveId] = useState(1);
@@ -74,6 +76,8 @@ function ExperiencePage() {
           <LineDivider lineDivider="lineTopDivider" />
           <ActionBtnContainer activeId={activeId} setActiveId={setActiveId} />
         </div>
+
+        {isMobile && <Gradient location="experiences" />}
 
         <AnimatePresence mode="wait">
           {activeId === 1 && (
@@ -130,8 +134,8 @@ function ExperiencePage() {
         </AnimatePresence>
 
         <AnimatePresence>
-          {((showArrowsFormation && activeId === 2) ||
-            (showArrowsSkills && activeId === 3)) && (
+          {((showArrowsFormation && !hideElement && activeId === 2) ||
+            (showArrowsSkills && !hideElement && activeId === 3)) && (
             <motion.div
               key="arrows"
               initial={{ opacity: 0 }}

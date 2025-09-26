@@ -21,8 +21,9 @@
 // MEDIA QUERRIES
 // ---------------------------------------------------------
 
-@media (max-width: 768px) {
+@media (max-width: 1190px) {
   .text {
     font-size: $fontSize16;
+    line-height: $lineHeight24;
   }
 }

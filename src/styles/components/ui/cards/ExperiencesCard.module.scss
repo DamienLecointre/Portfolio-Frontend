@@ -20,13 +20,17 @@
 }
 
 .detail,
-.date{
+.date {
   @extend %experienceSectionText;
 }
 
 .title,
 .date {
   color: $color-accent;
+}
+
+.detail {
+  line-height: $lineHeight32;
 }
 
 .datesContainer {
@@ -71,17 +75,28 @@
 
 // ---------------------------------------------------------
 // MEDIA QUERRIES
-// --------------------------------------------------------- 
+// ---------------------------------------------------------
 
 @media (max-width: 1300px) {
-
   .experiencesCardContainer {
-    max-height: 100%;
+    height: fit-content;
+    max-height: none;
   }
 }
 
-@media (max-width: 950px) {
+// @media (max-width: 1190px) {
+//   .title {
+//     font-size: 14px;
+//   }
+
+//   .detail,
+//   .date {
+//     font-size: 12px;
+//   }
+// }
+
+@media (max-width: 768px) {
   .experiencesCardContainer {
-    max-height: 200px;
+    max-height: 300px;
   }
 }

@@ -3,6 +3,8 @@ import { RefObject } from "react";
 import FormationCard from "@/components/ui/cards/FormationCard";
 import LineDivider from "@/components/ui/elements/LineDivider";
 
+import { useBreakpoint } from "@/hooks/useBreakpoint";
+
 import { formationsData } from "@/data/sections/formations/FormationsData";
 
 import styles from "@/styles/components/sections/formations/FormationsDisplay.module.scss";
@@ -24,6 +26,8 @@ function FormationsDisplay({
   onTouchMove,
   onTouchEnd,
 }: Props) {
+  const hideElement = useBreakpoint(950);
+
   return (
     <div className={styles.formationsWrapper} ref={wrapperRef}>
       <div
@@ -41,7 +45,7 @@ function FormationsDisplay({
         {formationsData.map((item) => (
           <FormationCard key={item.id} {...item} />
         ))}
-        <LineDivider lineDivider="formations" />
+        {!hideElement && <LineDivider lineDivider="formations" />}
       </div>
     </div>
   );

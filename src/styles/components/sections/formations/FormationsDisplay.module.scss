@@ -18,17 +18,27 @@
   box-sizing: content-box;
 }
 
-/* fallback mobile : si tu veux conserver le swipe natif sur petits écrans */
-// @media (max-width: 768px) {
-//   .formationsWrapper {
-//     overflow-x: auto;
-//   }
-//   .formationsContainer {
-//     width: auto;
-//     transition: none;
-//   }
+// ---------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------
 
-//   .formationsWrapper::-webkit-scrollbar {
-//     display: none;
-//   }
-// }
+@media (max-width: 950px) {
+  .formationsWrapper {
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .formationsContainer {
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 32px;
+    padding: $space48;
+    transition: none;
+  }
+
+  .formationsWrapper::-webkit-scrollbar {
+    display: none;
+  }
+}

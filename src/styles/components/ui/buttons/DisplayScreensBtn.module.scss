@@ -15,7 +15,7 @@
     transition: $mediumTransition;
   }
 
-  &:not(.activeLink):hover::after{
+  &:not(.activeLink):hover::after {
     width: 100%;
   }
 }
@@ -34,13 +34,13 @@
 // MEDIA QUERRIES
 // ---------------------------------------------------------
 
-@media (max-width: 1050px) {
-  .link {
-    font-size: 0.875rem;
-  }
-}
+// @media (max-width: 1190px) {
+//   .link {
+//     font-size: 0.875rem;
+//   }
+// }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
   .link {
     width: 100%;
     text-align: center;

@@ -11,7 +11,7 @@
 .titleContainer {
   opacity: 0;
   @include showElementOpacity1;
-  transition: opacity 1s ease
+  transition: opacity 1s ease;
 }
 
 @keyframes showElementOpacity1 {
@@ -76,21 +76,20 @@
 // ---------------------------------------------------------
 
 @media (max-width: 1550px) {
-
   .homeSubTitleWrapper {
     transform: translate(-6px, 39px);
   }
 
   .subTitleWrapper {
-    transform: translate(-9px, 55px);
+    transform: translate(-8px, 44px);
   }
 
   .homeSubTitle,
   .subTitle {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     transform: translate(6px, 0);
   }
-  
+
   .subTitle {
     line-height: $lineHeight42;
   }
@@ -109,24 +108,23 @@
   .pageTitle {
     font-size: 6.5rem;
     transform: translateX(-11px);
-    line-height: $lineHeight130;
+    // line-height: $lineHeight130;
   }
 }
 
 @media (max-width: 1190px) {
-
   .homeSubTitleWrapper {
     transform: translate(-11px, 25px);
   }
 
   .subTitleWrapper {
-    transform: translate(-11px, 26px);
+    transform: translate(-10px, 29px);
   }
 
   .homeSubTitle,
   .subTitle {
     font-size: $fontSize24;
-    line-height: 40px;
+    line-height: 32px;
     transform: translate(11px, 0);
   }
 
@@ -148,18 +146,17 @@
 }
 
 @media (max-width: 950px) {
-
   .subTitleWrapper {
-    transform: translate(-12px, 18px);
+    transform: translate(-11px, 18px);
   }
 
   .subTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 24px;
   }
 
   .functionTitle {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 
   .homePageTitle {
@@ -173,9 +170,8 @@
 }
 
 @media (max-width: 768px) {
-
   .subTitleWrapper {
-    transform: translate(-12px, 14px);
+    transform: translate(-11px, 26px);
   }
 
   .homeFunctionTitle {
@@ -185,8 +181,8 @@
 
   .functionTitle {
     font-size: 0.7rem;
-    text-align: center;
-    transform: translate(0,0);
+    // text-align: center;
+    transform: translate(12px, 0);
   }
 
   .homePageTitle {
@@ -199,7 +195,9 @@
 }
 
 @media (max-width: 460px) {
-
+  .subTitleWrapper {
+    transform: translate(-11px, 15px);
+  }
   .pageTitle {
     font-size: 2.7rem;
   }

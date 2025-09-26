@@ -4,7 +4,7 @@
   letter-spacing: $letterSpacingSmall;
   background: none;
   border-radius: 150px;
-  padding: $btnSpace12 $btnSpace16;
+  padding: $btnSpace8 $btnSpace16;
   cursor: pointer;
   transition: $mediumTransition;
 
@@ -22,15 +22,16 @@
 // MEDIA QUERRIES
 // ---------------------------------------------------------
 
-@media (max-width: 950px)  {
+@media (max-width: 950px) {
   .button {
     font-size: 0.7rem;
-    padding: 10px;
+    padding: 8px 10px;
   }
 }
 
 @media (max-width: 768px) {
   .button {
     font-size: 0.75rem;
+    letter-spacing: 0.1rem;
   }
 }

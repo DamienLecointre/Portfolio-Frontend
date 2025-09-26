@@ -3,7 +3,11 @@ import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 import styles from "@/styles/components/ui/molecules/Gradient.module.scss";
 
-function Gradient() {
+type Props = {
+  location: string;
+};
+
+function Gradient({ location }: Props) {
   const isShortScreen = useIsShortScreen(810);
   const isMobile = useBreakpoint(768);
 
@@ -11,7 +15,9 @@ function Gradient() {
 
   return (
     <div
-      className={styles.gradientContainer}
+      className={`${styles.gradientContainer} ${
+        location === "experiences" ? styles.position : ""
+      }`}
       style={isShortScreen && !isMobile ? gradientheightStyle : {}}
     ></div>
   );

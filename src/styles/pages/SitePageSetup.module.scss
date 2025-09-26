@@ -52,7 +52,7 @@
 
 @keyframes showElementOpacity1 {
   to {
-    opacity: .25;
+    opacity: 0.1;
   }
 }
 
@@ -65,11 +65,14 @@
 // ---------------------------------------------------------
 
 @media (max-width: 768px) {
-
   .pageContainer,
   .homePageContainer {
     flex-direction: column;
     align-items: center;
     padding: $mobilePaddingTopBot $mobilePaddingLeftRight;
+  }
+
+  .motionContainer {
+    overflow: auto;
   }
 }
