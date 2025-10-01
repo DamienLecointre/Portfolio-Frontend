@@ -28,11 +28,11 @@ function HistoirePage() {
         </>
       )}
       <div className={styles.contentContainer}>
-        <PageTitle dynamicTitle="Ma démarche" />
+        <PageTitle dynamicTitle="Mon approche" />
         <LineDivider lineDivider="lineTopDivider" />
         <div className={styles.txtContainer}>
-          {isShortScreen && <Gradient location="demarche" />}
-          {isMobile && <Gradient location="demarche" />}
+          {isShortScreen && <Gradient location="approche" />}
+          {isMobile && <Gradient location="approche" />}
           <IoChatboxEllipsesOutline className={styles.quoteIcon} />
           <StorytellingDisplay />
         </div>

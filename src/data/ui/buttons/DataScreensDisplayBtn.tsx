@@ -1,5 +1,5 @@
 const navData = [
-  { linkTitle: "Ma démarche", link: "/ma-demarche" },
+  { linkTitle: "Mon approche", link: "/mon-approche" },
   { linkTitle: "Mes expériences", link: "/mes-experiences" },
   { linkTitle: "Mes réalisations", link: "/mes-realisations" },
 ];

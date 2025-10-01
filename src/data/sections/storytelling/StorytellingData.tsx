@@ -3,31 +3,35 @@ type storytellingContentType = {
   text: string;
 }[];
 
-const storytellingData: storytellingContentType = [
+export const storytellingData: storytellingContentType = [
   {
     id: 1,
-    text: "Chaque projet naît d'une idée. Mon rôle est de vous accompagner pour la transformer en un site professionnel et efficace, fidèle à vos besoins.",
+    text: "Votre activité mérite plus qu'une simple présence en ligne.",
   },
   {
     id: 2,
-    text: "Je prends en charge l'ensemble du processus : conception graphique, développement et mise en ligne.",
+    text: "Que vous soyez un indépendant, une association ou une petite entreprise, je crée pour vous un site web moderne, clair et efficace qui valorise votre travail.",
   },
   {
     id: 3,
-    text: "Pas besoin de maîtriser le langage technique. Je simplifie chaque étape pour que tout reste compréhensible et transparent, dans le respect de votre budget.",
+    text: "Je prends en charge l'ensemble du processus : conception graphique, développement et mise en ligne.",
   },
   {
     id: 4,
-    text: "Mon objectif est de rendre la création de votre site web simple et agréable, et de vous livrer une solution prête à l'emploi.",
+    text: "Pas besoin de maîtriser le langage technique. Je simplifie chaque étape pour que tout reste compréhensible et transparent, dans le respect de votre budget.",
   },
   {
     id: 5,
+    text: "Mon objectif est de rendre la création de votre site web simple et agréable, et de vous livrer une solution prête à l'emploi.",
+  },
+  {
+    id: 6,
     text: "Vous avez un projet ? Parlons-en et voyons comment le concrétiser ensemble.",
   },
 ];
 
-function StorytellingData() {
-  return storytellingData;
-}
+// function StorytellingData() {
+//   return storytellingData;
+// }
 
-export default StorytellingData;
+// export default StorytellingData;
